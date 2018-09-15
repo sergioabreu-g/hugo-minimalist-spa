@@ -4,18 +4,12 @@
 name = "MinimalistSPA"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
+description = "A minimalist small business SPA theme for Hugo"
 homepage = "http://example.com/"
-tags = []
+tags = [minimalist,spa,singlepage,small,business,professional,simple]
 features = []
 min_version = "0.41"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+	name = "Sergio Abreu García"
+	homepage = "sag-dev.com"

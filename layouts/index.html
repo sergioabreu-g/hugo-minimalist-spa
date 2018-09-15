@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+
+	{{ partial "head.html" . }}
+	<body>
+		<p>This is the index layout of the theme</p>
+		{{.Content}}
+
+		<ul id="tabs-list">
+		{{ range (readDir "content/tabs") }}
+			<li id="{{ substr .Name 0 -3 }}"></li>
+		{{ end }}
+		</ul>
+	</body>
+
+{{ partial "footer.html" . }}
+{{ end }}
