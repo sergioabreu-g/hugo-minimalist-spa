@@ -1,1 +1,8 @@
-@import "partials/_colors.scss";
+$color1: {{ .Site.Params.color1 }};
+$color2: {{ .Site.Params.color2 }};
+$color3: {{ .Site.Params.color3 }};
+
+
+@import "partials/_general.scss";
+@import "partials/_header.scss";
+@import "partials/_main_content.scss";

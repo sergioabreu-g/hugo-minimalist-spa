@@ -1,4 +1,7 @@
 {{ define "main" }}
-	<p>This is the single page layout of the theme</p>
-	{{ .Content }}
+	{{ with .Content }}
+		{{ . }}
+	{{ else }}
+		<span>Write your index content here.</span>
+	{{ end }}
 {{ end }}

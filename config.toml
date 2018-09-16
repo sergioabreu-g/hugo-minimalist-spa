@@ -5,3 +5,7 @@
 
 	author = "Sergio Abreu García"
 	description = "This website uses hugo-minimalist-spa theme"
+	
+	color1 = "#050225"
+	color2 = "#7462f3"
+	color3 = "#866db0"
