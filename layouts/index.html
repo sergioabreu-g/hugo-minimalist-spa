@@ -3,12 +3,12 @@
 
 	{{ partial "head.html" . }}
 	<body>
-		<p>This is the index layout of the theme</p>
+		<a href="#location">This is the index layout of the theme</a>
 		{{.Content}}
 
 		<ul id="tabs-list">
 		{{ range (readDir "content/tabs") }}
-			<li id="{{ substr .Name 0 -3 }}"></li>
+			<li style="display: none" id="{{ substr .Name 0 -3 }}"></li>
 		{{ end }}
 		</ul>
 	</body>
