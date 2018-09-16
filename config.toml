@@ -1,3 +1,7 @@
 
 [params]
-	description = "This website uses hugo-minimalist-spa theme."
+	theme_author = "Sergio Abreu García"
+	theme_description = "Minimalist single page theme for Hugo."
+
+	author = "Sergio Abreu García"
+	description = "This website uses hugo-minimalist-spa theme"

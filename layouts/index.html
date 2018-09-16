@@ -1,17 +1,21 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
-	{{ partial "head.html" . }}
 	<body>
-		<a href="#location">This is the index layout of the theme</a>
-		{{.Content}}
+		
+		{{ partial "header.html" . }}
+		
+		<div class="main-content">
+			
+			{{.Content}}
+			
+			{{ partial "main_content.html" . }}
+			
+		</div>
 
-		<ul id="tabs-list">
-		{{ range (readDir "content/tabs") }}
-			<li style="display: none" id="{{ substr .Name 0 -3 }}"></li>
-		{{ end }}
-		</ul>
+		{{ partial "footer.html" . }}
+		
 	</body>
 
-{{ partial "footer.html" . }}
+{{ partial "foot.html" . }}
 {{ end }}

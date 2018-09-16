@@ -2,3 +2,8 @@
 <script src="/js/routes.js"></script>
 <script src="/js/router.js"></script>
 <script src="/js/wrapper.js"></script>
+
+{{ $options := (dict "targetPath" "css/hugo_minimalist_spa.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/hugo_minimalist_spa.scss" | resources.ToCSS $options }}
+
+<link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">

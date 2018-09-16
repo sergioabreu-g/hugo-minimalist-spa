@@ -1,0 +1,6 @@
+
+<ul id="tabs-list">
+	{{ range (readDir "content/tabs") }}
+		<li style="display: none" id="{{ substr .Name 0 -3 }}"></li>
+	{{ end }}
+</ul>

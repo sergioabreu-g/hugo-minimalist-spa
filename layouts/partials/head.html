@@ -4,7 +4,11 @@
 		<meta charset="utf-8">
 
 		<title>{{ .Site.Title }}</title>
-		<meta name="author" content="{{ .Site.Author }}">
+		
+		<meta name="theme-author" content="{{ .Site.Params.theme_author }}">
+		<meta name="theme-description" content="{{ .Site.Params.theme_description }}">
+		
+		<meta name="author" content="{{ .Site.Params.author }}">
 		<meta name="description" content="{{ .Site.Params.description }}">
 
 		{{ partial "imports" . }}
