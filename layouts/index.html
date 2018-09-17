@@ -5,17 +5,17 @@
 		
 		{{ partial "header.html" . }}
 		
-		<div class="main-content">
-			
-			{{ with .Content}}
-				{{ . }}
-			{{ else }}
-				<span>Your index content here.</span>
-			{{ end }}
-			
 			{{ partial "main_content.html" . }}
 			
-		</div>
+			<div class="index-content">
+				{{ with .Content}}
+					{{ . }}
+				{{ else }}
+					<span>Your index content here.</span>
+				{{ end }}
+			</div>
+			
+
 
 		{{ partial "footer.html" . }}
 		

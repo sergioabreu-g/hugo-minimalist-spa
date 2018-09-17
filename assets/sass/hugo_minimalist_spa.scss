@@ -6,3 +6,4 @@ $color3: {{ .Site.Params.color3 }};
 @import "partials/_general.scss";
 @import "partials/_header.scss";
 @import "partials/_main_content.scss";
+@import "partials/_index_content.scss";

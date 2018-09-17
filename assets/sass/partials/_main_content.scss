@@ -1,13 +1,21 @@
 .main-content {
 	display: flex;
-
+	flex-direction: column;
+	justify-content: space-evenly;
 	
-	width: 50%;
-	height: 300%;
-	background-color: $color2;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10%;
-	vertical-align: middle;
+	flex: 1;
+	height: 80%;
+	min-height: 22rem;
+	
 	text-align: center;
+}
+
+.main-content-window {
+	background-color: $color2;
+	
+	flex: 1;
+}
+
+.main-content-navigator {
+	margin: 3%;	
 }
