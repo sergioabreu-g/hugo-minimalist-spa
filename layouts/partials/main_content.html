@@ -1,15 +1,16 @@
 <div class="main-content">
 	
 	<div class="main-content-navigator">
-		<span>MAIN CONTENT NAVIGATION MENU</span>
+		<a id="main-content-navigator-previous" href="">Previous</a>
+		<a id="main-content-navigator-next" href="">Next</a>
 	</div>
 	
 	<div class="main-content-window">
-		<ul id="tabs-list">
+		<div id="tabs-list">
 			{{ range (readDir "content/tabs") }}
-				<li style="display: none" id="{{ substr .Name 0 -3 }}"></li>
+				<p style="display: none" id="{{ substr .Name 0 -3 }}"></p>
 			{{ end }}
-		</ul>
+		</div>
 	</div>
 	
 </div>
