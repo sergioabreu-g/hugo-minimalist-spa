@@ -1,6 +1,7 @@
 .header {
 	display: flex;
 	flex-direction: column;
+	@include respond-to(smartphone-portrait) { flex-direction: row; }
 	
 	width: 15%;
 	margin: 5%;

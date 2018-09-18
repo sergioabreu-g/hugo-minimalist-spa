@@ -2,7 +2,16 @@ $color1: {{ .Site.Params.color1 }};
 $color2: {{ .Site.Params.color2 }};
 $color3: {{ .Site.Params.color3 }};
 
+@mixin respond-to($media) {
+  @if $media == smartphone-portrait {
+    @media only screen and (max-width : 320px) { @content; }
+  }
+  @else if $media == smartphone-landscape {
+    @media only screen and (min-width : 321px) { @content; }
+  }
+}
 
+@import "partials/_mixins.scss";
 @import "partials/_general.scss";
 @import "partials/_header.scss";
 @import "partials/_main_content.scss";

@@ -4,18 +4,24 @@
 	justify-content: space-evenly;
 	
 	flex: 1;
-	height: 80%;
-	min-height: 22rem;
+	height: 100%;
+	min-height: 26rem;
 	
 	text-align: center;
 }
 
 .main-content-window {
-	background-color: $color2;
-	
 	flex: 1;
 }
 
 .main-content-navigator {
 	margin: 3%;
+}
+
+.arrow {
+	width: 4%;	
+}
+
+#arrow-next {
+	@include rotate(180)	
 }
