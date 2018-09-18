@@ -4,10 +4,10 @@ $color3: {{ .Site.Params.color3 }};
 
 @mixin respond-to($media) {
   @if $media == smartphone-portrait {
-    @media only screen and (max-width : 320px) { @content; }
+    @media only screen and (max-width : 700px) { @content; }
   }
   @else if $media == smartphone-landscape {
-    @media only screen and (min-width : 321px) { @content; }
+    @media only screen and (min-width : 700px) { @content; }
   }
 }
 
