@@ -16,3 +16,4 @@ $color3: {{ .Site.Data.theme_style.color3 }};
 @import "partials/_header.scss";
 @import "partials/_main_content.scss";
 @import "partials/_index_content.scss";
+@import "partials/_navbar.scss";

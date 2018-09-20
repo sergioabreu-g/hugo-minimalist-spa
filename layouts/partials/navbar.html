@@ -1,0 +1,9 @@
+<div class="navbar">
+	{{ range (readDir "content/tabs") }}
+		
+		<div class="navbar-element" id="navbar-{{ substr .Name 0 -3 }}">
+			<a href="#{{ substr .Name 0 -3 }}">{{ substr .Name 0 -3 }}</a>
+		</div>
+	
+	{{ end }}
+</div>

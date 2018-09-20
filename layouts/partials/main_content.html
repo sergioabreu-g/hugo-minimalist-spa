@@ -1,20 +1,14 @@
-<div class="main-content">
+<div class="main-content">	
 	
-	<div class="main-content-navigator">
-		<a id="main-content-navigator-previous" href="">
-			<img id="arrow-previous" class="arrow" src="/images/arrow.png" ></img>
-		</a>
-	
-		<a id="main-content-navigator-next" href="">
-			<img id="arrow-next" class="arrow" src="/images/arrow.png"></img>
-		</a>
-	</div>
+	{{ partial "navbar.html" . }}
 	
 	<div class="main-content-window">
 		<div id="tabs-list">
+			
 			{{ range (readDir "content/tabs") }}
 				<p style="display: none" id="{{ substr .Name 0 -3 }}"></p>
 			{{ end }}
+			
 		</div>
 	</div>
 	
