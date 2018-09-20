@@ -1,11 +1,8 @@
 
+author = "Sergio Abreu García"
+
 [params]
 	theme_author = "Sergio Abreu García"
 	theme_description = "Minimalist single page theme for Hugo."
-
-	author = "Sergio Abreu García"
-	description = "This website uses hugo-minimalist-spa theme"
 	
-	color1 = "#050225"
-	color2 = "#7462f3"
-	color3 = "#866db0"
+	description = "This website uses hugo-minimalist-spa theme"

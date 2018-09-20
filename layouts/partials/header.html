@@ -2,6 +2,13 @@
 	<img class=logo src="/images/logo.png"></img>
 	<hr class="header-separator"></hr>
 	<div class="social-media">
-		<span>SOCIAL MEDIA WILL GO HERE</span>
+		
+		{{ range $.Site.Data.social_media }}
+			<div class="social-media-element">
+				<a href="{{ .target }}" target="_blank">
+					<img class="social-media-element" src="{{ .source }}"></img>
+				</a>
+			</div>
+		{{ end }}
 	</div>
 </div>

@@ -1,0 +1,11 @@
+[instagram]
+	source = "/images/social_media/instagram.png"
+	target = "https://www.instagram.com"
+	
+[twitter]
+	source = "/images/social_media/twitter.png"
+	target = "https://www.twitter.com"
+	
+[facebook]
+	source = "/images/social_media/facebook.png"
+	target = "https://www.facebook.com"

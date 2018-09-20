@@ -1,6 +1,6 @@
-$color1: {{ .Site.Params.color1 }};
-$color2: {{ .Site.Params.color2 }};
-$color3: {{ .Site.Params.color3 }};
+$color1: {{ .Site.Data.theme_style.color1 }};
+$color2: {{ .Site.Data.theme_style.color2 }};
+$color3: {{ .Site.Data.theme_style.color3 }};
 
 @mixin respond-to($media) {
   @if $media == smartphone-portrait {
