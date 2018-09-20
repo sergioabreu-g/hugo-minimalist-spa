@@ -6,17 +6,7 @@
 		
 		{{ partial "header.html" . }}
 		
-			{{ partial "main_content.html" . }}
-			
-			<div class="index-content">
-				{{ with .Content}}
-					{{ . }}
-				{{ else }}
-					<span>Your index content here.</span>
-				{{ end }}
-			</div>
-			
-
+			{{ partial "main_content.html" . }}	
 
 		{{ partial "footer.html" . }}
 		

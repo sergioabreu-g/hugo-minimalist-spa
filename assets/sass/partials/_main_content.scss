@@ -16,12 +16,20 @@
 
 .main-content-navigator {
 	margin: 3%;
+	
+	a{
+		text-decoration: none;			
+	}
 }
 
 .arrow {
 	width: 1.7rem;	
 }
 
+#arrow-previous {
+	@include rotate(-90)	
+}
+
 #arrow-next {
-	@include rotate(180)	
+	@include rotate(90)	
 }
