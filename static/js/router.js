@@ -28,7 +28,21 @@ router.prototype.initial_load = function() {
 			$.ajax({
 				url : route,
 				success : function(result){
+					//Loads each content page
 					element.innerHTML = result;
+					
+					//The loaded page is surrounded by a placeholder '<div>' whose id
+					//is the title set by the user in the Markdown file (if there's any)
+					var inner_div = element.getElementsByTagName('div')[0];
+					
+					//If the user has specified a title, we change the navbar element
+					//to use it
+					if (inner_div.id != "") {
+						document.getElementById("navbar-"+element.id).getElementsByTagName('a')[0].innerHTML = inner_div.id.split("-")[1];
+					}
+					
+					//Finally get disposed of the placeholder inner '<div>'
+					element.innerHTML = inner_div.innerHTML;
 				}
 			});
 		})(this.routes[id], this.tab_elements[id]);

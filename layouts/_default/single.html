@@ -1,7 +1,11 @@
 {{ define "main" }}
-	{{ with .Content }}
-		{{ . }}
-	{{ else }}
-		<span>Write your index content here.</span>
-	{{ end }}
+	<div id="{{ with .Title }}title-{{ . }}{{ end }}">
+
+		{{ with .Content }}
+			{{ . }}
+		{{ else }}
+			<span>Write your content here.</span>
+		{{ end }}
+	
+	</div>
 {{ end }}

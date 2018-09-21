@@ -11,7 +11,10 @@ $color3: {{ .Site.Data.theme_style.color3 }};
   }
 }
 
+
+@import "partials/_reset.scss";
 @import "partials/_mixins.scss";
+
 @import "partials/_general.scss";
 @import "partials/_header.scss";
 @import "partials/_main_content.scss";
