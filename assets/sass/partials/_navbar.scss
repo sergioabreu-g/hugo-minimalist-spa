@@ -1,5 +1,14 @@
 .navbar {
 	display: flex;
 	justify-content: space-evenly;
+	
 	background-color: white;
+	@include respond-to(smartphone-portrait) { width: 100%; }
+}
+
+.navbar-element {
+	margin: 0.5rem 0;	
+	@include respond-to(smartphone-portrait) { margin: 0.3rem 0; }
+	
+	font-size: calc(1.3rem);
 }

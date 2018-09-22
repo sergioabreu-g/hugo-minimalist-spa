@@ -6,6 +6,8 @@
 	flex: 1;
 	height: 100%;
 	min-height: 26rem;
+	@include respond-to(smartphone-portrait) { width: 100%; }
+	@include respond-to(smartphone-portrait) { min-height: 0; }
 	
 	text-align: center;
 }
