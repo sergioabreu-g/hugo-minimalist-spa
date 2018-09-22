@@ -1,0 +1,49 @@
+%no-outline{
+	outline: 0;
+	border: none;
+	-moz-outline-style: none;
+}
+
+%link-color {
+	@include transition(color .3s ease)
+	
+	:link {
+		@include transition(color .3s ease)
+	}
+	
+	:visited {
+		@include transition(color .3s ease)
+	}
+	
+	:active {
+		@include transition(color .3s ease)
+		@extend %no-outline;
+	}
+	
+	:hover{
+		@include transition(color .3s ease)
+		color: $color5;
+	}
+}
+
+%link-opacity {
+	@include transition(opacity .3s ease)
+	
+	:link {
+		@include transition(opacity .3s ease)
+	}
+	
+	:visited {
+		@include transition(opacity .3s ease)
+	}
+	
+	:active {
+		@include transition(opacity .3s ease)
+		@extend %no-outline;
+	}
+	
+	:hover{
+		@include transition(opacity .3s ease)
+		opacity: 0.8;
+	}
+}

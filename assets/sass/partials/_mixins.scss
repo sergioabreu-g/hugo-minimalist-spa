@@ -32,3 +32,12 @@
 	-webkit-transform-origin: $origin;
           transform-origin: $origin;
 }
+
+// generic transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
