@@ -4,6 +4,9 @@
 	
 	background-color: white;
 	@include respond-to(smartphone-portrait) { width: 100%; }
+	
+	border-radius: 0 0 0 3rem;
+	@include respond-to(smartphone-portrait) { border-radius: 0 3rem 0 3rem; }
 }
 
 .navbar-element {
@@ -11,4 +14,5 @@
 	@include respond-to(smartphone-portrait) { margin: 0.3rem 0; }
 	
 	font-size: calc(1.3rem);
+	@include respond-to(smartphone-portrait) { font-size: calc(1.2rem); }
 }
