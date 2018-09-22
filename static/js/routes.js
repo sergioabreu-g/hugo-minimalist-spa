@@ -1,6 +1,6 @@
 'use strict';
 
-var base_url = "/tabs/";
+var base_url = "tabs/";
 var base_file = "/index.html";
 var default_id = '';
 	
