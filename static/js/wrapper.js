@@ -8,6 +8,6 @@ window.onload = function() {
 		my_router = new router(load_routes());
 	}
 	else {
-		console.log("Couldn't load routes);	
+		console.log("Couldn't load routes");	
 	}
 }
