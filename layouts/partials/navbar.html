@@ -1,9 +1,18 @@
 <div class="navbar">
-	{{ range (readDir "content/tabs") }}
-		
-		<div class="navbar-element" id="navbar-{{ substr .Name 0 -3 }}">
-			<a href="#{{ substr .Name 0 -3 }}">{{ substr .Name 0 -3 }}</a>
-		</div>
+	{{ with (readDir "content/tabs") }}
+		{{ range (readDir "content/tabs") }}
+
+			<div class="navbar-element" id="navbar-{{ replace (substr .Name 0 -3) " " "" }}">
+				<a href="#{{ replace (substr .Name 0 -3) " " "" }}">{{ substr .Name 0 -3 }}</a>
+			</div>
+
+		{{ end }}
+	{{ else }}
+		{{ range (readDir "themes/hugo-minimalist-spa/layouts/partials/theme-content") }}			
+			<div class="navbar-element" id="navbar-{{ replace (substr .Name 2 -5) " " "" }}">
+				<a href="#{{ replace (substr .Name 2 -5) " " "" }}">{{ substr .Name 2 -5 }}</a>
+			</div>
 	
+		{{ end }}
 	{{ end }}
 </div>

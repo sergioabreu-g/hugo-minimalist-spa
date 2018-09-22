@@ -5,8 +5,20 @@
 	<div class="main-content-window">
 		<div id="tabs-list">
 			
-			{{ range (readDir "content/tabs") }}
-				<div id="{{ substr .Name 0 -3 }}" style="display: none"></div>
+			{{ with readDir "content/tabs" }}
+			
+				{{ range (readDir "content/tabs") }}
+					<div id="{{ replace (substr .Name 0 -3) " " "" }}" style="display: none"></div>
+				{{ end }}
+				
+			{{ else }}
+				{{ range (readDir "themes/hugo-minimalist-spa/layouts/partials/theme-content") }}
+			
+					{{ $path := printf "%s%s" "theme-content/" .Name }}
+					<div id="{{ replace (substr .Name 2 -5) " " "" }}" style="display: none">{{ partial $path . }}</div>
+			
+				{{ end }}
+			
 			{{ end }}
 			
 		</div>

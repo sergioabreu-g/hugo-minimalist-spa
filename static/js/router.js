@@ -43,6 +43,10 @@ router.prototype.initial_load = function() {
 					
 					//Finally get disposed of the placeholder inner '<div>'
 					element.innerHTML = inner_div.innerHTML;
+				},
+				
+				error: function(error) {
+					console.log("Error loading file from route: " + route + " [Ignore this if you haven't setup your website content yet]")
 				}
 			});
 		})(this.routes[id], this.tab_elements[id]);
@@ -58,7 +62,7 @@ router.prototype.url_changed_callback = function(){
 	this.current_id = id;
 }
 
-router.prototype.swap_contents = function(id){
+router.prototype.swap_contents = function(id){	
 	this.tab_elements[this.current_id].style = "display: none;";
 	this.tab_elements[id].style = "display: block;";
 }
