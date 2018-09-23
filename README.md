@@ -1,5 +1,5 @@
 
-# Hugo minimalist SPA
+# [Hugo minimalist SPA](https://saggamedeveloper.github.io/hugo-minimalist-spa/)
 A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page_application) theme for [Hugo](https://github.com/gohugoio/hugo)
 (minimum 0.43).
 
