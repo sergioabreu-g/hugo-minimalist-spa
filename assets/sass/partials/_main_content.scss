@@ -3,18 +3,27 @@
 	flex-direction: column;
 	justify-content: start;
 	
-	max-height: 100%;
+	min-height: 0;
 	align-self: start;
 	
 	flex: 1;
 	@include respond-to(smartphone-portrait) { width: 100%; }
 	@include respond-to(smartphone-portrait) { align-self: center; }
-	
-	text-align: center;
 }
 
 .main-content-window {
 	flex: 1;
 	
 	overflow: auto;
+	overflow-x: hidden;
+	
+	* {
+		overflow:auto;
+		max-width: 100%;
+		word-wrap: break-word;
+	}
+}
+
+.tabs-list {
+	margin: 0 1rem;
 }
