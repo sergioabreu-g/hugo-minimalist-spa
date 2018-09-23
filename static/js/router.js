@@ -3,15 +3,16 @@
 var router = function(routes, content_mask, default_id){
 	this.routes = routes;
 	this.content_mask = content_mask;
+	this.default_id = default_id;
 	
-	this.current_id = "";
+	this.current_id;
 	this.tab_elements = {};
 	
 	this.initial_load();
 	
 	//This initial 'fake' call allows to initialize contents
 	//and link values
-	this.url_changed_callback(id_from_hash(window.location.hash));
+	this.url_changed_callback();
 	
 	//Adds the callback along with the context of the instance
 	var current_context = this;
@@ -57,22 +58,23 @@ router.prototype.initial_load = function() {
 }
 
 router.prototype.url_changed_callback = function(){
-	var id = id_from_hash(window.location.hash);
+	var id = this.id_from_hash(window.location.hash);
 	
 	if (id != this.current_id){
 		//Update contents each time the URL changes
 		this.swap_contents(id);
-
 		this.current_id = id;
 	}
 }
 
 router.prototype.swap_contents = function(id){
-	if (this.current_id != "") this.tab_elements[this.current_id].style = "display: none;";
+	if (this.current_id != null && this.current_id != '')
+		this.tab_elements[this.current_id].style = "display: none;";
+	
 	this.tab_elements[id].style = "display: block;";
 }
 
-var id_from_hash = function(hash) {
-	if (hash == '') return this.default_id;
+router.prototype.id_from_hash = function(hash) {
+	if (hash == '' || hash == null) return this.default_id;
 	else return hash.replace('#', '');
 }
