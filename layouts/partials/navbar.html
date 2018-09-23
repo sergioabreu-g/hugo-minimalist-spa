@@ -1,5 +1,5 @@
 <div class="navbar">
-	{{ with (readDir "content/tabs") }}
+	{{ if fileExists "content/tabs" }}
 		{{ range (readDir "content/tabs") }}
 
 			<div class="navbar-element" id="navbar-{{ replace (substr .Name 0 -3) " " "" }}">

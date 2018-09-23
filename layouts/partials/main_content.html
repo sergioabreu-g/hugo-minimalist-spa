@@ -5,7 +5,7 @@
 	<div class="main-content-window">
 		<div id="tabs-list">
 			
-			{{ with readDir "content/tabs" }}
+			{{ if fileExists "content/tabs" }}
 			
 				{{ range (readDir "content/tabs") }}
 					<div id="{{ replace (substr .Name 0 -3) " " "" }}" style="display: none"></div>
