@@ -5,6 +5,7 @@
 	
 	min-height: 0;
 	align-self: start;
+	height: 100%;
 	
 	flex: 1;
 	@include respond-to(smartphone-portrait) { width: 100%; }
