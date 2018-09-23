@@ -1,11 +1,14 @@
 .header {
+	width: 15%;
+	align-self: start;
+	
 	display: flex;
 	flex-direction: column;
 	@include respond-to(smartphone-portrait) { flex-direction: row; }
+	@include respond-to(smartphone-portrait) { align-self: center; }
 	justify-content: space-evenly;
 	align-items: center;
-	
-	width: 15%;
+
 	@include respond-to(smartphone-portrait) { width: 80%; }
 	@include respond-to(smartphone-portrait) { max-height: 20%; }
 	margin: calc(3% + 0.3rem);
