@@ -4,7 +4,7 @@
 		{{ with .Content }}
 			{{ . }}
 		{{ else }}
-			<span>Write your content here.</span>
+			<span>Your {{ with .Title }}"{{ . }}"{{ end }} content will go here.</span>
 		{{ end }}
 	
 	</div>

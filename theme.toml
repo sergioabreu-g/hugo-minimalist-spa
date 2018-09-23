@@ -5,10 +5,10 @@ name = "MinimalistSPA"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = "A minimalist small business SPA theme for Hugo"
-homepage = "http://example.com/"
+homepage = "https://github.com/SAGGameDeveloper/hugo-minimalist-spa"
 tags = [minimalist,spa,singlepage,small,business,professional,simple]
 features = []
-min_version = "0.41"
+min_version = "0.48"
 
 [author]
 	name = "Sergio Abreu García"
