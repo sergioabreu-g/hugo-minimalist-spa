@@ -1,7 +1,9 @@
 'use strict';
 
-var router = function(routes){
+var router = function(routes, content_mask, default_id){
 	this.routes = routes;
+	this.content_mask = content_mask;
+	
 	this.current_id = "";
 	this.tab_elements = {};
 	
@@ -22,7 +24,8 @@ router.prototype.initial_load = function() {
 	//Iterate through every route, looking for the right HTML element
 	//and adding its content from an AJAX async call
 	for (var id in this.routes) {
-		this.tab_elements[id] = document.getElementById(id);
+		var masked_id = this.content_mask + id;
+		this.tab_elements[id] = document.getElementById(masked_id);
 		
 		(function(route, element) {
 			$.ajax({
@@ -70,6 +73,6 @@ router.prototype.swap_contents = function(id){
 }
 
 var id_from_hash = function(hash) {
-	if (hash == '') return default_id;
+	if (hash == '') return this.default_id;
 	else return hash.replace('#', '');
 }
