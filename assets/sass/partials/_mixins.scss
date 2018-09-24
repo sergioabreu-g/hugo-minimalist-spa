@@ -1,3 +1,11 @@
+
+@mixin respond-to($media) {
+  @if $media == smartphone-portrait {
+    @media only screen and (max-width : 820px) { @content; }
+  }
+}
+
+
 // generic transform
 @mixin transform($transforms) {
 	   -moz-transform: $transforms;
