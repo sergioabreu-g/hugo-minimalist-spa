@@ -1,15 +1,19 @@
 .navbar {
 	display: flex;
 	justify-content: space-evenly;
+	flex-direction: row;
+	text-align: center;
 	
 	background-color: $color2;
 	@include respond-to(vertical-layout) { width: 100%; }
 	
 	border-radius: 0 0 0 3rem;
 	@include respond-to(vertical-layout) { border-radius: 0 3rem 0 3rem; } 
+	
+	@include transition(max-height 2s);
 }
 
-.navbar-element {
+.navbar-element {	
 	color: $color4;
 	font-family: 'default';
 	font-weight: 700;
@@ -21,4 +25,9 @@
 	@include respond-to(vertical-layout) { font-size: calc(1.2rem); }
 	
 	@extend %link-color;
+}
+
+.collapsible-menu {
+	align-self: center;
+	width: 2rem;
 }

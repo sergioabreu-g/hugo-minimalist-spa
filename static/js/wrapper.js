@@ -7,6 +7,7 @@ window.onload = function() {
 	var base_file = "/index.html";
 	
 	var my_router;
+	var my_navbar;
 	var routes_result = load_routes(base_url, base_file, content_mask);
 	
 	if (routes_result['routes'] != {}){
@@ -15,4 +16,6 @@ window.onload = function() {
 	else {
 		console.log("Couldn't load routes");	
 	}
+	
+	my_navbar = new navbar();
 }
