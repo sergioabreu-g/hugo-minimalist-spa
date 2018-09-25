@@ -3,10 +3,10 @@
 	justify-content: space-evenly;
 	
 	background-color: $color2;
-	@include respond-to(smartphone-portrait) { width: 100%; }
+	@include respond-to(vertical-layout) { width: 100%; }
 	
 	border-radius: 0 0 0 3rem;
-	@include respond-to(smartphone-portrait) { border-radius: 0 3rem 0 3rem; } 
+	@include respond-to(vertical-layout) { border-radius: 0 3rem 0 3rem; } 
 }
 
 .navbar-element {
@@ -15,10 +15,10 @@
 	font-weight: 700;
 	
 	margin: 1.2rem 0 0.6rem 0;	
-	@include respond-to(smartphone-portrait) { margin: 0.3rem 0; }
+	@include respond-to(vertical-layout) { margin: 0.3rem 0; }
 	
 	font-size: calc(1.3rem);
-	@include respond-to(smartphone-portrait) { font-size: calc(1.2rem); }
+	@include respond-to(vertical-layout) { font-size: calc(1.2rem); }
 	
 	@extend %link-color;
 }

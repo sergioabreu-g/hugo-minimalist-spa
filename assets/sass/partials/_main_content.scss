@@ -8,8 +8,8 @@
 	height: 100%;
 	
 	flex: 1;
-	@include respond-to(smartphone-portrait) { width: 100%; }
-	@include respond-to(smartphone-portrait) { align-self: center; }
+	@include respond-to(vertical-layout) { width: 100%; }
+	@include respond-to(vertical-layout) { align-self: center; }
 }
 
 .main-content-window {

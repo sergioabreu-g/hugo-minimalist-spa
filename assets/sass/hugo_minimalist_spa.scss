@@ -5,6 +5,7 @@ $color4: {{ .Site.Data.theme_style.color4 }};
 $color5: {{ .Site.Data.theme_style.color5 }};
 
 @import "partials/_mixins.scss";
+@import "partials/_media_queries.scss";
 @import "partials/_reset.scss";
 @import "partials/_abstract.scss";
 

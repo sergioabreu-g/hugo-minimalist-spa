@@ -22,9 +22,9 @@
 	
 	display: flex;
 	flex-direction: row;
-	@include respond-to(smartphone-portrait) { flex-direction: column; }
+	@include respond-to(vertical-layout) { flex-direction: column; }
 	justify-content: space-evenly;
-	@include respond-to(smartphone-portrait) { justify-content: start; }
+	@include respond-to(vertical-layout) { justify-content: start; }
 	align-items: center;
 	
 	background-color: $color1;
