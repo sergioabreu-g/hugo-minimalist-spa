@@ -7,10 +7,11 @@
 <script src="js/wrapper.js"></script>
 
 
-{{ $options := (dict "targetPath" "css/hugo_minimalist_spa.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "sass/hugo_minimalist_spa.scss" | resources.ExecuteAsTemplate "hugo_minimalist_spa.style.scss" . | resources.ToCSS $options | minify }}
+{{ $options := (dict "targetPath" "css/hugo_minimalist_spa.css") }}
+{{ $style := resources.Get "sass/hugo_minimalist_spa.scss" | resources.ExecuteAsTemplate "hugo_minimalist_spa.style.scss" . | resources.ToCSS $options}}
+{{ $temp := $style.RelPermalink }}
 
-<link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
+<link rel="stylesheet" type="text/css" href="css/hugo_minimalist_spa.css">
 
 {{ if (fileExists "layouts/partials/custom_imports.html") }}
 	{{ partial "custom_imports.html" . }}
