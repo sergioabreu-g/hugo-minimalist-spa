@@ -8,6 +8,7 @@ window.onload = function() {
 	
 	var my_router;
 	var my_navbar;
+	var my_header;
 	var routes_result = load_routes(base_url, base_file, content_mask);
 	
 	if (routes_result['routes'] != {}){
@@ -18,4 +19,5 @@ window.onload = function() {
 	}
 	
 	my_navbar = new navbar();
+	my_header = new scroll_collapsing(document.getElementsByClassName("main-content-window")[0]);
 }
