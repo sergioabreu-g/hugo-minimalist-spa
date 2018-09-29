@@ -7,7 +7,7 @@ window.onload = function() {
 	var base_file = "/index.html";
 	
 	var my_router;
-	var my_navbar;
+	var my_collapser;
 	var routes_result = load_routes(base_url, base_file, content_mask);
 	
 	if (routes_result['routes'] != {}){
@@ -17,5 +17,5 @@ window.onload = function() {
 		console.log("Couldn't load routes");	
 	}
 	
-	my_navbar = new navbar();
+	collapser = new collapser(document.getElementsByClassName("main-content-window")[0]);
 }
