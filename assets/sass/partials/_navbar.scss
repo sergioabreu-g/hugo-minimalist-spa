@@ -1,6 +1,7 @@
 .navbar {
 	display: flex;
 	justify-content: space-evenly;
+	
 	flex-direction: row;
 	text-align: center;
 	
@@ -10,7 +11,7 @@
 	@include respond-to(vertical-layout) { width: 100%; }
 	
 	border-radius: 0 0 0 3rem;
-	@include respond-to(vertical-layout) { border-radius: 0 3rem 0 3rem; } 
+	@include respond-to(vertical-layout) { border-radius: 0 3rem 0 3rem; }
 	
 	@include transition(max-height 0.7s);
 }
@@ -32,4 +33,5 @@
 .collapsible-menu {
 	align-self: center;
 	width: 2rem;
+	height: 2rem;
 }
