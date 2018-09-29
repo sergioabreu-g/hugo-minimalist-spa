@@ -38,12 +38,14 @@ collapser.prototype.on_scroll = function() {
 	if (window.getComputedStyle(this.general_layout_element).flexDirection == "column") {
 		var current_y_scroll = this.main_scroll_element.scrollTop;
 
-		if (current_y_scroll < this.last_y_scroll - this.scroll_threshold || current_y_scroll == 0)
+		if (current_y_scroll < this.last_y_scroll - this.scroll_threshold || current_y_scroll == 0) {
 			this.expand();
-		else if (current_y_scroll > this.last_y_scroll + this.scroll_threshold)
+			this.last_y_scroll = current_y_scroll;
+		}
+		else if (current_y_scroll > this.last_y_scroll + this.scroll_threshold) {
 			this.collapse();
-		
-		this.last_y_scroll = current_y_scroll;
+			this.last_y_scroll = current_y_scroll;
+		}
 	}
 }
 
