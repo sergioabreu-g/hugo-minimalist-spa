@@ -18,4 +18,6 @@ window.onload = function() {
 	}
 	
 	collapser = new collapser(document.getElementsByClassName("main-content-window")[0]);
+	
+	image_to_inline_svg();
 }

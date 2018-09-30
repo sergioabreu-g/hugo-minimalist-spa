@@ -44,39 +44,39 @@ a {
     -ms-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
-    color: white; }
+    color: #FFC98A; }
 
 .social-media-element {
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; }
+  -webkit-transition: fill 0.3s ease;
+  -moz-transition: fill 0.3s ease;
+  -ms-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease; }
   .social-media-element :link {
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition: fill 0.3s ease;
+    -ms-transition: fill 0.3s ease;
+    -o-transition: fill 0.3s ease;
+    transition: fill 0.3s ease; }
   .social-media-element :visited {
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition: fill 0.3s ease;
+    -ms-transition: fill 0.3s ease;
+    -o-transition: fill 0.3s ease;
+    transition: fill 0.3s ease; }
   .social-media-element :active {
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition: fill 0.3s ease;
+    -ms-transition: fill 0.3s ease;
+    -o-transition: fill 0.3s ease;
+    transition: fill 0.3s ease; }
   .social-media-element :hover {
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-    opacity: 0.8; }
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition: fill 0.3s ease;
+    -ms-transition: fill 0.3s ease;
+    -o-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+    fill: #FFB865; }
 
 @font-face {
   font-family: 'default';
@@ -99,8 +99,9 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #040116;
-  color: white; }
+  background-color: #f0f0f0;
+  background: url(../images/background.jpg) fixed;
+  color: black; }
   @media only screen and (max-width: 820px) and (orientation: portrait) {
     .general-layout {
       flex-direction: column; } }
@@ -110,6 +111,7 @@ a {
 
 .header {
   width: 15%;
+  min-width: 15%;
   align-self: start;
   display: flex;
   flex-direction: column;
@@ -131,14 +133,15 @@ a {
       align-self: center; } }
   @media only screen and (max-width: 820px) and (orientation: portrait) {
     .header {
-      width: 80%; } }
+      width: 80%;
+      min-width: 0; } }
   @media only screen and (max-width: 820px) and (orientation: portrait) {
     .header {
       max-height: 20%;
       height: 13%; } }
 
 .logo {
-  min-width: 5rem;
+  min-width: 0;
   object-fit: contain;
   width: 100%;
   height: 100%; }
@@ -157,15 +160,17 @@ a {
   flex-wrap: wrap;
   vertical-align: middle;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #165F83;
   max-height: 100%;
-  min-width: 4rem;
   width: 100%;
   height: 100%;
   margin: 0; }
 
 .social-media-element {
-  height: 100%;
-  width: calc(10% + 1rem);
+  fill: #165F83;
+  width: calc(13% + 0.8rem);
   margin: auto; }
   .social-media-element a {
     width: 100%;
@@ -174,6 +179,9 @@ a {
     object-fit: contain;
     margin: 0;
     width: 100%; }
+  .social-media-element .svg {
+    width: 100%;
+    height: 100%; }
 
 .main-content {
   display: flex;
@@ -182,6 +190,7 @@ a {
   min-height: 0;
   align-self: start;
   height: 100%;
+  min-width: 0;
   flex: 1; }
   @media only screen and (max-width: 820px) and (orientation: portrait) {
     .main-content {
@@ -200,7 +209,7 @@ a {
     word-wrap: break-word; }
 
 .tabs-list {
-  margin: 0 1rem; }
+  margin: 0 1.2rem; }
 
 .index-content {
   margin: 5%;
@@ -212,8 +221,8 @@ a {
   flex-direction: row;
   text-align: center;
   overflow: hidden;
-  background-color: #545454;
-  border-radius: 0 0 0 3rem;
+  background-color: #bdbdbd;
+  border-radius: 0 0 0 1.1rem;
   -webkit-transition: max-height 0.7s;
   -moz-transition: max-height 0.7s;
   -ms-transition: max-height 0.7s;
@@ -224,10 +233,10 @@ a {
       width: 100%; } }
   @media only screen and (max-width: 820px) and (orientation: portrait) {
     .navbar {
-      border-radius: 0 3rem 0 3rem; } }
+      border-radius: 0.3rem 0.3rem 0.3rem 0.3rem; } }
 
 .navbar-element {
-  color: #ffad5c;
+  color: #498BAB;
   font-family: 'default';
   font-weight: 700;
   margin: 1.2rem 0 0.6rem 0;
@@ -240,6 +249,10 @@ a {
       font-size: calc(1.2rem); } }
 
 .collapsible-menu {
+  fill: #165F83;
   align-self: center;
-  width: 2rem;
-  height: 2rem; }
+  width: 1.5rem;
+  height: 1.5rem; }
+  .collapsible-menu .svg {
+    width: 100%;
+    height: 100%; }
