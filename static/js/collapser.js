@@ -140,7 +140,7 @@ collapser.prototype.expand_menu = function() {
 
 //Collapses the menu
 collapser.prototype.collapse_menu = function() {
-	this.navbar.style.maxHeight = window.getComputedStyle(this.collapse_button).height;
+	this.navbar.style.maxHeight = this.menu_collapsible? window.getComputedStyle(this.collapse_button).height : "100%";
 	this.collapse_button.style.marginBottom = "0";
 	
 	this.menu_opened = false;

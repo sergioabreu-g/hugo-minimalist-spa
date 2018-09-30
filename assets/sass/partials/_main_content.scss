@@ -6,7 +6,7 @@
 	min-height: 0;
 	align-self: start;
 	height: 100%;
-	
+	min-width: 0;
 	flex: 1;
 	@include respond-to(vertical-layout) { width: 100%; }
 	@include respond-to(vertical-layout) { align-self: center; }
