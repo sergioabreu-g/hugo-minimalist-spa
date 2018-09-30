@@ -1,11 +1,11 @@
 [instagram]
-	source = "images/social_media/instagram.png"
+	source = "images/social_media/instagram.svg"
 	target = "https://www.instagram.com"
 	
 [twitter]
-	source = "images/social_media/twitter.png"
+	source = "images/social_media/twitter.svg"
 	target = "https://www.twitter.com"
 	
 [facebook]
-	source = "images/social_media/facebook.png"
+	source = "images/social_media/facebook.svg"
 	target = "https://www.facebook.com"

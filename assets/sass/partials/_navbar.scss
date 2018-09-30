@@ -10,14 +10,14 @@
 	background-color: $color2;
 	@include respond-to(vertical-layout) { width: 100%; }
 	
-	border-radius: 0 0 0 3rem;
-	@include respond-to(vertical-layout) { border-radius: 0 3rem 0 3rem; }
+	border-radius: 0 0 0 1.1rem;
+	@include respond-to(vertical-layout) { border-radius: 0.3rem 0.3rem 0.3rem 0.3rem; }
 	
 	@include transition(max-height 0.7s);
 }
 
 .navbar-element {	
-	color: $color4;
+	color: $color6;
 	font-family: 'default';
 	font-weight: 700;
 	
@@ -27,11 +27,17 @@
 	font-size: calc(1.3rem);
 	@include respond-to(vertical-layout) { font-size: calc(1.2rem); }
 	
-	@extend %link-color;
+	@extend %navbar-element-transition;
 }
 
 .collapsible-menu {
+	fill: $color4;
 	align-self: center;
 	width: 1.5rem;
 	height: 1.5rem;
+	
+	.svg {
+		width: 100%;
+		height: 100%;
+	}
 }

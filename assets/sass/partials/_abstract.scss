@@ -4,7 +4,7 @@
 	-moz-outline-style: none;
 }
 
-%link-color {
+%navbar-element-transition {
 	@include transition(color .3s ease)
 	
 	:link {
@@ -22,28 +22,28 @@
 	
 	:hover{
 		@include transition(color .3s ease)
-		color: $color5;
+		color: $color7;
 	}
 }
 
-%link-opacity {
-	@include transition(opacity .3s ease)
+%social-media-transition {
+	@include transition(fill .3s ease)
 	
 	:link {
-		@include transition(opacity .3s ease)
+		@include transition(fill .3s ease)
 	}
 	
 	:visited {
-		@include transition(opacity .3s ease)
+		@include transition(fill .3s ease)
 	}
 	
 	:active {
-		@include transition(opacity .3s ease)
+		@include transition(fill .3s ease)
 		@extend %no-outline;
 	}
 	
 	:hover{
-		@include transition(opacity .3s ease)
-		opacity: 0.8;
+		@include transition(fill .3s ease)
+		fill: $color5;
 	}
 }

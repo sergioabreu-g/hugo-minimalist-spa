@@ -3,6 +3,8 @@ $color2: {{ .Site.Data.theme_style.color2 }};
 $color3: {{ .Site.Data.theme_style.color3 }};
 $color4: {{ .Site.Data.theme_style.color4 }};
 $color5: {{ .Site.Data.theme_style.color5 }};
+$color6: {{ .Site.Data.theme_style.color6 }};
+$color7: {{ .Site.Data.theme_style.color7 }};
 
 @import "partials/_mixins.scss";
 @import "partials/_media_queries.scss";

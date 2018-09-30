@@ -1,5 +1,7 @@
 <div class="navbar">
-	<img src="images/menu.png" class="collapsible-menu">
+	<div class="collapsible-menu">
+		<img src="images/menu.svg" class="svg">
+	</div>
 	
 	{{ if fileExists "content/tabs" }}
 		{{ range (readDir "content/tabs") }}

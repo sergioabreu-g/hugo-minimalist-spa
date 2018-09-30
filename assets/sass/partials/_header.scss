@@ -43,6 +43,8 @@
 	align-items: center;
 	align-content: center;
 	
+	color: $color4;
+	
 	max-height: 100%;
 	width: 100%;
 	height: 100%;
@@ -50,7 +52,7 @@
 }
 
 .social-media-element {
-
+	fill: $color4;
 	width: calc(13% + 0.8rem);
 	margin: auto;
 	
@@ -65,5 +67,10 @@
 		width: 100%;
 	}
 	
-	@extend %link-opacity;
+	@extend %social-media-transition;
+	
+	.svg {
+		width: 100%;
+		height: 100%;
+	}
 }
