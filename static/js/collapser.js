@@ -1,8 +1,8 @@
 var collapser = function(main_scroll_element) {
 	// HEADER
-	this.header_element = document.getElementsByClassName("header")[0];
+	this.header = document.getElementsByClassName("header")[0];
 	this.general_layout_element = document.getElementsByClassName("general-layout")[0];
-	this.header_margin = this.header_element.style.margin;
+	this.header_margin = this.header.style.margin;
 	
 	this.collapsed = false;
 	
@@ -37,8 +37,11 @@ var collapser = function(main_scroll_element) {
 collapser.prototype.on_scroll = function() {
 	if (window.getComputedStyle(this.general_layout_element).flexDirection == "column") {
 		var current_y_scroll = this.main_scroll_element.scrollTop;
-
-		if (current_y_scroll < this.last_y_scroll - this.scroll_threshold || current_y_scroll == 0) {
+		var max_current_y_scroll = current_y_scroll + this.main_scroll_element.offsetHeight;
+		
+		
+		if (max_current_y_scroll+50 <= this.main_scroll_element.scrollHeight //Disables the expansion at the bottom of the window
+				&& (current_y_scroll < this.last_y_scroll - this.scroll_threshold || current_y_scroll == 0)) {
 			this.expand();
 			this.last_y_scroll = current_y_scroll;
 		}
@@ -94,8 +97,8 @@ collapser.prototype.resize_menu = function() {
 collapser.prototype.expand = function() {
 	this.collapsed = false;
 	
-	this.header_element.style.maxHeight = "100%";
-	this.header_element.style.margin = this.header_margin;
+	this.header.style.maxHeight = "100%";
+	this.header.style.margin = this.header_margin;
 	
 	this.collapse_menu();
 }
@@ -105,8 +108,8 @@ collapser.prototype.expand = function() {
 collapser.prototype.collapse = function() {
 	this.collapsed = true;
 	
-	this.header_element.style.maxHeight = "0";
-	this.header_element.style.margin = "0";
+	this.header.style.maxHeight = "0";
+	this.header.style.margin = "0";
 	
 	this.collapse_menu();
 	this.navbar.style.maxHeight = "0";
