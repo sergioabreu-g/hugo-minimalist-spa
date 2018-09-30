@@ -35,12 +35,15 @@ var collapser = function(main_scroll_element) {
 
 //Defines the collapsing behaviour on scroll
 collapser.prototype.on_scroll = function() {
-	if (window.getComputedStyle(this.general_layout_element).flexDirection == "column") {
-		var current_y_scroll = this.main_scroll_element.scrollTop;
-		var max_current_y_scroll = current_y_scroll + this.main_scroll_element.offsetHeight;
+	var scrollHeight = this.main_scroll_element.scrollHeight;
+	var offsetHeight = this.main_scroll_element.offsetHeight;
+	var current_y_scroll = this.main_scroll_element.scrollTop;
+	var max_current_y_scroll = current_y_scroll + this.main_scroll_element.offsetHeight;
+	
+	if (window.getComputedStyle(this.general_layout_element).flexDirection == "column"
+		&& scrollHeight > offsetHeight*2) { //Only collapse/expand with a minimum scroll height
 		
-		
-		if (max_current_y_scroll+50 <= this.main_scroll_element.scrollHeight //Disables the expansion at the bottom of the window
+		if (max_current_y_scroll+50 <= scrollHeight //Disables the expansion at the bottom of the window
 				&& (current_y_scroll < this.last_y_scroll - this.scroll_threshold || current_y_scroll == 0)) {
 			this.expand();
 			this.last_y_scroll = current_y_scroll;
@@ -49,6 +52,7 @@ collapser.prototype.on_scroll = function() {
 			this.collapse();
 			this.last_y_scroll = current_y_scroll;
 		}
+		
 	}
 }
 
