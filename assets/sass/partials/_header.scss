@@ -1,6 +1,6 @@
 .header {
-	width: 15%;
-	min-width: 15%;
+	width: 12%;
+	min-width: 12%;
 	align-self: start;
 	
 	display: flex;
@@ -12,7 +12,7 @@
 
 	@include respond-to(vertical-layout) { width: 80%; min-width: 0; }
 	@include respond-to(vertical-layout) { max-height: 20%; height: 13%; }
-	margin: calc(3% + 0.3rem);
+	margin: calc(2% + 0.5rem);
 	
 	text-align: center;
 	

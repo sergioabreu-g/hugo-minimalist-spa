@@ -1,7 +1,7 @@
-color1 = "#f0f0f0" #
-color2 = "#bdbdbd" #Background color of the navbar
-color3 = "black" #Color of the text
-color4 = "#165F83" #Color of the social media icons
+color1 = "#111111" #Background color of the header
+color2 = "#474747" #Background color of the navbar
+color3 = "black"   #Color of the text
+color4 = "#1f84b6" #Color of the social media icons
 color5 = "#FFB865" #Color of the social media icons on hover
-color6 = "#498BAB" #Color of the menu elements
+color6 = "white" #Color of the menu elements
 color7 = "#FFC98A" #Color of the menu elements on hover

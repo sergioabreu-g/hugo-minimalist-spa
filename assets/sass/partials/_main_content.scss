@@ -1,4 +1,6 @@
 .main-content {
+	background: url(../images/background.jpg) fixed;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
@@ -27,4 +29,8 @@
 
 .tabs-list {
 	margin: 0 1.2rem;
+	
+	p, h1, h2, h3, a {
+		overflow: visible;	
+	}
 }

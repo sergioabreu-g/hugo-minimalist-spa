@@ -10,9 +10,6 @@
 	background-color: $color2;
 	@include respond-to(vertical-layout) { width: 100%; }
 	
-	border-radius: 0 0 0 1.1rem;
-	@include respond-to(vertical-layout) { border-radius: 0.3rem 0.3rem 0.3rem 0.3rem; }
-	
 	@include transition(max-height 0.7s);
 }
 
@@ -31,7 +28,7 @@
 }
 
 .collapsible-menu {
-	fill: $color4;
+	fill: $color6;
 	align-self: center;
 	width: 1.5rem;
 	height: 1.5rem;

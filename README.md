@@ -15,7 +15,13 @@ make the necessary enhancements.
 You can see a working website example using this theme [here](https://saggamedeveloper.github.io/Cafe-website-SPA/).
 
 # How to use (MUST READ!)
-This is not the usual Hugo theme you can download and start
+This is not the usual Hugo theme you can download and startcolor1 = "#111111" #Background color of the header
+color2 = "#474747" #Background color of the navbar
+color3 = "black"   #Color of the text
+color4 = "#1f84b6" #Color of the social media icons
+color5 = "#FFB865" #Color of the social media icons on hover
+color6 = "white" #Color of the menu elements
+color7 = "#FFC98A" #Color of the menu elements on hover
 adding contents. Making it single page comes with some limitations
 you need to know before starting to build your website.
 
@@ -115,11 +121,13 @@ You can set custom colors for the theme so you can make it look as you want.
 To do so, start by creating a `theme_style.toml` inside `data` folder in the root of your
 website. The whole theme is based on 5 colors, so those are the ones you can set. In `toml`:
 ```
-color1 = "#040116"
-color2 = "#545454"
-color3 = "white"
-color4 = "#ffad5c"
-color5 = "white"
+color1 = "#111111" #Background color of the header
+color2 = "#474747" #Background color of the navbar
+color3 = "black"   #Color of the text
+color4 = "#1f84b6" #Color of the social media icons
+color5 = "#FFB865" #Color of the social media icons on hover
+color6 = "white"   #Color of the menu elements
+color7 = "#FFC98A" #Color of the menu elements on hover
 ```
 Those variables are directly passed to the SASS files, so you can use any CSS supported
 color you want.
