@@ -7,14 +7,14 @@
 	
 	overflow: hidden;
 	
-	background-color: $color2;
+	background-color: $color_navbar;
 	@include respond-to(vertical-layout) { width: 100%; }
 	
 	@include transition(max-height 0.7s);
 }
 
 .navbar-element {	
-	color: $color6;
+	color: $color_navbar_elements;
 	font-family: 'default';
 	font-weight: 700;
 	
@@ -28,7 +28,7 @@
 }
 
 .collapsible-menu {
-	fill: $color6;
+	fill: $color_navbar_elements;
 	align-self: center;
 	width: 1.5rem;
 	height: 1.5rem;

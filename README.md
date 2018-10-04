@@ -135,13 +135,28 @@ You can set custom colors for the theme so you can make it look as you want.
 To do so, start by creating a `theme_style.toml` inside `data` folder in the root of your
 website. The whole theme is based on 5 colors, so those are the ones you can set. In `toml`:
 ```
-color1 = "#111111" #Background color of the header
-color2 = "#474747" #Background color of the navbar
-color3 = "black"   #Color of the text
-color4 = "#1f84b6" #Color of the social media icons
-color5 = "#FFB865" #Color of the social media icons on hover
-color6 = "white"   #Color of the menu elements
-color7 = "#FFC98A" #Color of the menu elements on hover
+# HEADER/NAVBAR COLORS
+
+color_header = "#111111"				#Background color of the header
+color_navbar = "#474747" 				#Background color of the navbar
+
+color_social_media = "#1f84b6" 			#Color of the social media icons
+color_social_media_hover = "#FFB865" 	#Color of the social media icons on hover
+
+color_navbar_elements = "white" 		#Color of the navbar elements
+color_navbar_elements_hover = "#FFC98A" #Color of the navbar elements on hover
+
+
+# MAIN CONTENT COLORS
+
+color_text = "black"   					#Color of normal text
+
+color_h1 = "#5863b8" 					#Color of the h1 elements
+color_h2 = "#505792" 					#Color of the h2 elements
+color_h3 = "#464c7d" 					#Color of the h3 elements
+
+color_link = "#1f84b6"					#Color of the main content links
+color_link_hover = "#FFB865"			#Color of the main content links on hover
 ```
 Those variables are directly passed to the SASS files, so you can use any CSS supported
 color you want.

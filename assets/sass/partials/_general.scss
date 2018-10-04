@@ -27,6 +27,6 @@
 	@include respond-to(vertical-layout) { justify-content: start; }
 	align-items: center;
 	
-	background-color: $color1;
-	color: $color3;
+	background-color: $color_header;
+	color: $color_text;
 }

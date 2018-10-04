@@ -1,10 +1,16 @@
-$color1: {{ .Site.Data.theme_style.color1 }};
-$color2: {{ .Site.Data.theme_style.color2 }};
-$color3: {{ .Site.Data.theme_style.color3 }};
-$color4: {{ .Site.Data.theme_style.color4 }};
-$color5: {{ .Site.Data.theme_style.color5 }};
-$color6: {{ .Site.Data.theme_style.color6 }};
-$color7: {{ .Site.Data.theme_style.color7 }};
+$color_header: {{ .Site.Data.theme_style.color_header }};
+$color_navbar: {{ .Site.Data.theme_style.color_navbar }};
+$color_text: {{ .Site.Data.theme_style.color_text }};
+$color_social_media: {{ .Site.Data.theme_style.color_social_media }};
+$color_social_media_hover: {{ .Site.Data.theme_style.color_social_media_hover }};
+$color_navbar_elements: {{ .Site.Data.theme_style.color_navbar_elements }};
+$color_navbar_elements_hover: {{ .Site.Data.theme_style.color_navbar_elements_hover }};
+$color_h1: {{ .Site.Data.theme_style.color_h1 }};
+$color_h2: {{ .Site.Data.theme_style.color_h2 }};
+$color_h3: {{ .Site.Data.theme_style.color_h3 }};
+$color_link: {{ .Site.Data.theme_style.color_link }};
+$color_link_hover: {{ .Site.Data.theme_style.color_link_hover }};
+
 
 @import "partials/_mixins.scss";
 @import "partials/_media_queries.scss";

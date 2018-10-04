@@ -10,6 +10,7 @@
 	height: 100%;
 	min-width: 0;
 	flex: 1;
+	
 	@include respond-to(vertical-layout) { width: 100%; }
 	@include respond-to(vertical-layout) { align-self: center; }
 }
@@ -29,6 +30,22 @@
 
 .tabs-list {
 	margin: 0 1.2rem;
+	
+	h1 {
+		color: $color_h1;
+	}
+	
+	h2 {
+		color: $color_h2;	
+	}
+	
+	h3 {
+		color: $color_h3;	
+	}
+	
+	a {
+		@extend %link;
+	}
 	
 	p, h1, h2, h3, a {
 		overflow: visible;	

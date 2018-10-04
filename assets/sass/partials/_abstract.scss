@@ -7,43 +7,66 @@
 %navbar-element-transition {
 	@include transition(color .3s ease)
 	
-	:link {
+	&:link {
 		@include transition(color .3s ease)
 	}
 	
-	:visited {
+	&:visited {
 		@include transition(color .3s ease)
 	}
 	
-	:active {
+	&:active {
 		@include transition(color .3s ease)
 		@extend %no-outline;
 	}
 	
-	:hover{
+	&:hover{
 		@include transition(color .3s ease)
-		color: $color7;
+		color: $color_navbar_elements_hover;
 	}
 }
 
 %social-media-transition {
 	@include transition(fill .3s ease)
 	
-	:link {
+	&:link {
 		@include transition(fill .3s ease)
 	}
 	
-	:visited {
+	&:visited {
 		@include transition(fill .3s ease)
 	}
 	
-	:active {
+	&:active {
 		@include transition(fill .3s ease)
 		@extend %no-outline;
 	}
 	
-	:hover{
+	&:hover{
 		@include transition(fill .3s ease)
-		fill: $color5;
+		fill: $color_social_media_hover;
+	}
+}
+
+%link {
+	color: $color_link;
+	@include transition(color .1s ease)
+	
+	&:link {
+		@include transition(color .1s ease)
+	}
+	
+	&:visited {
+		@include transition(color .1s ease)
+	}
+	
+	&:active {
+		@include transition(color .1s ease)
+		@extend %no-outline;
+	}
+	
+	&:hover{
+		@include transition(color .1s ease)
+		color: $color_link_hover;
 	}
 }
