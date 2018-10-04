@@ -45,20 +45,32 @@
 
 		
 			<div class="social-media-element">
-				<a href="https://www.facebook.com" target="_blank">
-					<img class="social-media-element svg" src="images/social_media/facebook.svg"></img>
+				<a href="saggamedeveloper@gmail.com" target="_blank">
+					<img class="social-media-element svg" src="images/social_media/email.svg"></img>
 				</a>
 			</div>
 		
 			<div class="social-media-element">
-				<a href="https://www.instagram.com" target="_blank">
-					<img class="social-media-element svg" src="images/social_media/instagram.svg"></img>
+				<a href="https://github.com/SAGGameDeveloper/hugo-minimalist-spa" target="_blank">
+					<img class="social-media-element svg" src="images/social_media/github.svg"></img>
 				</a>
 			</div>
 		
 			<div class="social-media-element">
-				<a href="https://www.twitter.com" target="_blank">
-					<img class="social-media-element svg" src="images/social_media/twitter.svg"></img>
+				<a href="https://sag-dev.com" target="_blank">
+					<img class="social-media-element svg" src="images/social_media/home.svg"></img>
+				</a>
+			</div>
+		
+			<div class="social-media-element">
+				<a href="https://www.linkedin.com/in/sergio-abreu-garc%c3%ada" target="_blank">
+					<img class="social-media-element svg" src="images/social_media/linkedin.svg"></img>
+				</a>
+			</div>
+		
+			<div class="social-media-element">
+				<a href="https://t.me/SAGGameDeveloper" target="_blank">
+					<img class="social-media-element svg" src="images/social_media/telegram.svg"></img>
 				</a>
 			</div>
 		
@@ -100,7 +112,7 @@
 				
 			
 					
-					<div id="content-About" style="display: none"><h1 id="hugominimalistspa">Hugo minimalist SPA</h1>
+					<div id="content-About" style="display: none"><h1 id="hugominimalistspahttpssaggamedevelopergithubiohugominimalistspa">Hugo minimalist SPA</h1>
 
 <p>A minimalist <a href="https://en.wikipedia.org/wiki/Single-page_application">single page application</a> theme for <a href="https://github.com/gohugoio/hugo">Hugo</a>
 (minimum 0.43).</p>
@@ -141,7 +153,9 @@ the theme will still treat it as a Markdown file, causing
 major problems with your final HTML.</p>
 
 <p>Inside you markdown files you can write HTML if you want,
-it will be added to the final <code>index.html</code> automatically.</p>
+it will be added to the final <code>index.html</code> automatically. If you
+need to use routes to elements inside your HTML, remember that paths
+are relative to the final <code>index.html</code> file.</p>
 
 <h3 id="titlingcontent">Titling content</h3>
 
@@ -195,10 +209,10 @@ theme default social media will disappear. Here you can see a list of supported 
 
 <p>To add your social media just create a <code>social-media.toml</code> (or the Hugo supported language
 your prefer) inside your <code>data/</code> folder, in your website's root directory. Then write down
-every social media you want with the following syntax:</p>
+every social media you want with the following syntax (or equivalent if not using <code>toml</code>):</p>
 
 <pre><code class="toml language-toml">[github]
-    source = "images/social_media/github.png"
+    source = "images/social_media/github.svg"
     target = "https://www.github.com"
 
 [name_of_another_socialmedia]
@@ -207,12 +221,31 @@ every social media you want with the following syntax:</p>
 </code></pre>
 
 <p>All of the supported icons are in <code>images/social_media/</code>, with its name being the name
-of the social media (without spaces and caps) plus the <code>.png</code> extension.</p>
+of the social media (without spaces and caps) plus the <code>.svg</code> extension.</p>
 
 <p>If you want to add custom icons or custom social-media, you just have to add your images
 to the <code>static/images/social_media/</code> folder of your own website. Remember that the path to
 the source does not start in the <code>static/</code> folder, since it disappears after building your
 page with Hugo.</p>
+
+<h3 id="orderingsocialmedia">Ordering social media</h3>
+
+<p>Social media elements are sorted alphabetically by the name you give them. If you want to
+keep a certain order, I recommend you to put a number before the name of each element, such
+as this (in <code>toml</code>):</p>
+
+<pre><code class="toml language-toml">[2-github]
+    source = "images/social_media/github.svg"
+    target = "https://www.github.com"
+
+[1-instagram]
+    source = "images/social_media/instagram.svg"
+    target = "https://www.instagram.com"
+</code></pre>
+
+<p>In this case, instagram would be the first social media element, while github would appear
+right after it. Declaration order does not matter, you can place the elements as you wish in
+the document.</p>
 
 <h2 id="customimports">Custom imports</h2>
 
@@ -222,7 +255,7 @@ if you don't have one) of your website.</p>
 
 <h2 id="styling">Styling</h2>
 
-<p>Hugo minimalist SPA allows you to customize some aspects of its appearance.</p>
+<p>Hugo minimalist SPA allows you to customize many aspects of its appearance.</p>
 
 <h3 id="colors">Colors</h3>
 
@@ -231,15 +264,39 @@ if you don't have one) of your website.</p>
 <p>To do so, start by creating a <code>theme_style.toml</code> inside <code>data</code> folder in the root of your
 website. The whole theme is based on 5 colors, so those are the ones you can set. In <code>toml</code>:</p>
 
-<pre><code>color1 = "#040116"
-color2 = "#545454"
-color3 = "white"
-color4 = "#ffad5c"
-color5 = "white"
+<pre><code># HEADER/NAVBAR COLORS
+
+color_header = "#111111"				#Background color of the header
+color_navbar = "#474747" 				#Background color of the navbar
+
+color_social_media = "#1f84b6" 			#Color of the social media icons
+color_social_media_hover = "#FFB865" 	#Color of the social media icons on hover
+
+color_navbar_elements = "white" 		#Color of the navbar elements
+color_navbar_elements_hover = "#FFC98A" #Color of the navbar elements on hover
+
+
+# MAIN CONTENT COLORS
+
+color_text = "black"   					#Color of normal text
+
+color_h1 = "#5863b8" 					#Color of the h1 elements
+color_h2 = "#505792" 					#Color of the h2 elements
+color_h3 = "#464c7d" 					#Color of the h3 elements
+
+color_link = "#1f84b6"					#Color of the main content links
+color_link_hover = "#FFB865"			#Color of the main content links on hover
 </code></pre>
 
 <p>Those variables are directly passed to the SASS files, so you can use any CSS supported
 color you want.</p>
+
+<p>The background of the main content is not a color but an image. You can replace it with
+your own webpage static files as with any other element, just put a <code>background.png</code> in
+the <code>static/images</code> folder of your site and Hugo will use it automatically. If you want
+to use a color instead, you will need to modify the SASS file named <code>_main_content.scss</code>,
+located inside <code>assets/sass/partials</code>. Replace the <code>background: url(...);</code> statement with
+<code>background-color: 'your-color';</code>.</p>
 
 <h3 id="fontsimagesandotherstaticfiles">Fonts, images and other static files</h3>
 
@@ -278,7 +335,9 @@ aspects to take into account if you do so.</p>
 
 <h2 id="javascriptspacore">JavaScript SPA core</h2>
 
-<p>The single page application core of this theme is made using JavaScript and JQuery (only for the AJAX requests). If you want to modify it, you can find the code on <code>static/js</code>. There are other ways of achieving the same result without JavaScript using Hugo's pipelines. I didn't find them very pleasant, but if you do,
+<p>The single page application core of this theme is made using JavaScript and JQuery (only for the AJAX requests).
+If you want to modify it, you can find the code on <code>static/js</code>. There are other ways of achieving the same result
+without JavaScript using Hugo's pipelines. I didn't find them very pleasant, but if you do,
 you can create your own SPA implementation and delete the JavaScript source.</p>
 
 <h2 id="layouts">Layouts</h2>
@@ -288,10 +347,15 @@ some elements using Hugo functions. Those id's are later used by the JavaScript 
 requests. This way the id's for the content can be set dynamically. At the same time, the JavaScript
 code is able to find the files to be loaded without using external configuration files.</p>
 
-<p>The Go implementation that does this can be found in <code>navbar.html</code> and <code>main_content.html</code> (in <code>layouts/partials/</code> folder), they use the filename and custom title (if there's any) to inject the proper id's into the final HTML. Those id's are then used by the client side JavaScript to request the correct files from the <code>content/tabs</code> folder.</p>
+<p>The Go implementation that does this can be found in <code>navbar.html</code> and <code>main_content.html</code> (in <code>layouts/partials/</code> folder),
+they use the filename and custom title (if there's any) to inject the proper id's into the final HTML. Those id's are then
+used by the client side JavaScript to request the correct files from the <code>content/tabs</code> folder.</p>
 
 <p>Due to Hugo limitations, the custom titles cannot be directly injected into the navigation bar for their use.
-To skip this problem, I use a temporal <code>&lt;div&gt;</code> whose id is the custom title. This <code>&lt;div&gt;</code> is set in the <code>single.html</code> layout, which has direct access to the <code>.Title</code> through Hugo. The JavaScript router then takes the id (if it's not empty, which means a custom title has been set), and uses it to set the navigation bar proper names. After that it extracts the inner HTML of the temporal <code>&lt;div&gt;</code>, created by the single layout, to finally get disposed of it.</p></div>
+To skip this problem, I use a temporal <code>&lt;div&gt;</code> whose id is the custom title. This <code>&lt;div&gt;</code> is set in the <code>single.html</code> layout,
+which has direct access to the <code>.Title</code> through Hugo. The JavaScript router then takes the id (if it's not empty, which means
+a custom title has been set), and uses it to set the navigation bar proper names. After that it extracts the inner HTML of
+the temporal <code>&lt;div&gt;</code>, created by the single layout, to finally get disposed of it.</p></div>
 			
 				
 			
