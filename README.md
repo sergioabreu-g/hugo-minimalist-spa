@@ -1,4 +1,3 @@
-
 # [Hugo minimalist SPA](https://saggamedeveloper.github.io/hugo-minimalist-spa/)
 A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page_application) theme for [Hugo](https://github.com/gohugoio/hugo)
 (minimum 0.43).
@@ -15,13 +14,7 @@ make the necessary enhancements.
 You can see a working website example using this theme [here](https://saggamedeveloper.github.io/Cafe-website-SPA/).
 
 # How to use (MUST READ!)
-This is not the usual Hugo theme you can download and startcolor1 = "#111111" #Background color of the header
-color2 = "#474747" #Background color of the navbar
-color3 = "black"   #Color of the text
-color4 = "#1f84b6" #Color of the social media icons
-color5 = "#FFB865" #Color of the social media icons on hover
-color6 = "white" #Color of the menu elements
-color7 = "#FFC98A" #Color of the menu elements on hover
+This is not the usual Hugo theme you can download and start
 adding contents. Making it single page comes with some limitations
 you need to know before starting to build your website.
 
@@ -38,7 +31,9 @@ the theme will still treat it as a Markdown file, causing
 major problems with your final HTML.
 
 Inside you markdown files you can write HTML if you want,
-it will be added to the final `index.html` automatically.
+it will be added to the final `index.html` automatically. If you
+need to use routes to elements inside your HTML, remember that paths
+are relative to the final `index.html` file.
 
 ### Titling content
 There are two ways to title your content. You can use the filename 
@@ -89,10 +84,10 @@ theme default social media will disappear. Here you can see a list of supported 
 
 To add your social media just create a `social-media.toml` (or the Hugo supported language
 your prefer) inside your `data/` folder, in your website's root directory. Then write down
-every social media you want with the following syntax:
+every social media you want with the following syntax (or equivalent if not using `toml`):
 ```toml
 [github]
-	source = "images/social_media/github.png"
+	source = "images/social_media/github.svg"
 	target = "https://www.github.com"
 
 [name_of_another_socialmedia]
@@ -100,12 +95,31 @@ every social media you want with the following syntax:
 	target = "socialmedia_url"
 ```
 All of the supported icons are in `images/social_media/`, with its name being the name
-of the social media (without spaces and caps) plus the `.png` extension.
+of the social media (without spaces and caps) plus the `.svg` extension.
 
 If you want to add custom icons or custom social-media, you just have to add your images
 to the `static/images/social_media/` folder of your own website. Remember that the path to
 the source does not start in the `static/` folder, since it disappears after building your
 page with Hugo.
+
+### Ordering social media
+Social media elements are sorted alphabetically by the name you give them. If you want to
+keep a certain order, I recommend you to put a number before the name of each element, such
+as this (in `toml`):
+
+```toml
+[2-github]
+	source = "images/social_media/github.svg"
+	target = "https://www.github.com"
+
+[1-instagram]
+	source = "images/social_media/instagram.svg"
+	target = "https://www.instagram.com"
+```
+
+In this case, instagram would be the first social media element, while github would appear
+right after it. Declaration order does not matter, you can place the elements as you wish in
+the document.
 
 ## Custom imports
 You can import your own files adding one layout to your page. To do so, create a file
@@ -113,7 +127,7 @@ named `custom_imports.html` and put it inside the `layouts/partials/` folder (cr
 if you don't have one) of your website.
 
 ## Styling
-Hugo minimalist SPA allows you to customize some aspects of its appearance.
+Hugo minimalist SPA allows you to customize many aspects of its appearance.
 
 ### Colors
 You can set custom colors for the theme so you can make it look as you want.
@@ -131,6 +145,13 @@ color7 = "#FFC98A" #Color of the menu elements on hover
 ```
 Those variables are directly passed to the SASS files, so you can use any CSS supported
 color you want.
+
+The background of the main content is not a color but an image. You can replace it with
+your own webpage static files as with any other element, just put a `background.png` in
+the `static/images` folder of your site and Hugo will use it automatically. If you want
+to use a color instead, you will need to modify the SASS file named `_main_content.scss`,
+located inside `assets/sass/partials`. Replace the `background: url(...);` statement with
+`background-color: 'your-color';`.
 
 ### Fonts, images and other static files
 Hugo uses [Less Sans](https://www.behance.net/gallery/56973217/Less-Sans-Minimal-Typeface-Free-Download)
@@ -165,7 +186,9 @@ You can modify the core source of the theme directly if you want, here you will 
 aspects to take into account if you do so.
 
 ## JavaScript SPA core
-The single page application core of this theme is made using JavaScript and JQuery (only for the AJAX requests). If you want to modify it, you can find the code on `static/js`. There are other ways of achieving the same result without JavaScript using Hugo's pipelines. I didn't find them very pleasant, but if you do,
+The single page application core of this theme is made using JavaScript and JQuery (only for the AJAX requests).
+If you want to modify it, you can find the code on `static/js`. There are other ways of achieving the same result
+without JavaScript using Hugo's pipelines. I didn't find them very pleasant, but if you do,
 you can create your own SPA implementation and delete the JavaScript source.
 
 ## Layouts
@@ -174,10 +197,15 @@ some elements using Hugo functions. Those id's are later used by the JavaScript 
 requests. This way the id's for the content can be set dynamically. At the same time, the JavaScript
 code is able to find the files to be loaded without using external configuration files.
 
-The Go implementation that does this can be found in `navbar.html` and `main_content.html` (in `layouts/partials/` folder), they use the filename and custom title (if there's any) to inject the proper id's into the final HTML. Those id's are then used by the client side JavaScript to request the correct files from the `content/tabs` folder.
+The Go implementation that does this can be found in `navbar.html` and `main_content.html` (in `layouts/partials/` folder),
+they use the filename and custom title (if there's any) to inject the proper id's into the final HTML. Those id's are then
+used by the client side JavaScript to request the correct files from the `content/tabs` folder.
 
 Due to Hugo limitations, the custom titles cannot be directly injected into the navigation bar for their use.
-To skip this problem, I use a temporal `<div>` whose id is the custom title. This `<div>` is set in the `single.html` layout, which has direct access to the `.Title` through Hugo. The JavaScript router then takes the id (if it's not empty, which means a custom title has been set), and uses it to set the navigation bar proper names. After that it extracts the inner HTML of the temporal `<div>`, created by the single layout, to finally get disposed of it.
+To skip this problem, I use a temporal `<div>` whose id is the custom title. This `<div>` is set in the `single.html` layout,
+which has direct access to the `.Title` through Hugo. The JavaScript router then takes the id (if it's not empty, which means
+a custom title has been set), and uses it to set the navigation bar proper names. After that it extracts the inner HTML of
+the temporal `<div>`, created by the single layout, to finally get disposed of it.
 
 # Distribution
 You can modify this theme as much as you want. If you want to distribute a modified version,
