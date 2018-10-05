@@ -78,7 +78,7 @@ To modify the description you need to do it within the `params` section. Using `
 Modifying the social media icons is quite simple, the moment you add your own, the
 theme default social media will disappear. Here you can see a list of supported icons:
 
-![alt text](https://raw.githubusercontent.com/SAGGameDeveloper/hugo-minimalist-spa/master/available_icons.png "Available icons")
+![alt text](https://raw.githubusercontent.com/SAGGameDeveloper/hugo-minimalist-spa/master/images/available_icons.png "Available icons")
 
 To add your social media just create a `social-media.toml` (or the Hugo supported language
 your prefer) inside your `data/` folder, in your website's root directory. Then write down
