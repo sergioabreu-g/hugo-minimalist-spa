@@ -1,20 +1,110 @@
-# [Hugo minimalist SPA](https://saggamedeveloper.github.io/hugo-minimalist-spa/)
-A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page_application) theme for [Hugo](https://github.com/gohugoio/hugo)
-(minimum 0.43).
+# [Hugo minimalist SPA](https://saggamedeveloper.github.io/hugo-minimalist-spa/) ![hugo-theme](https://img.shields.io/badge/hugo-theme-brightgreen.svg) ![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)
+
+A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page_application)
+theme for [Hugo](https://github.com/gohugoio/hugo), with a clear focus on responsiveness,
+simplicity and elegance.
+
+![Theme sample](https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/images/tn.png "Theme sample")
 
 # About
-Hugo does not support single page applications natively, so making a theme that does is quite a challenge. This is the main reason I decided to make this theme.
+I love challenges, and making a single page application using Hugo, a static site generator,
+seemed like a good one. The SPA core is made using plain Javascript (only JQuery is used
+for the Ajax requests). I aim to provide a simple but powerful design anyone can use, either
+for personal or professional matters.
 
-This theme was created using [Hugo 0.48](https://github.com/gohugoio/hugo/releases/tag/v0.48),
-and it should work from [0.43](https://github.com/gohugoio/hugo/releases/tag/v0.43) onward. Still, it could give some trouble with versions below 0.48,
-so be aware of it if you use older versions. You can always open an
-issue if you are unable to make it work, I will be glad to help and
-make the necessary enhancements.
+If you make any website using this theme I encourage you to open an issue, I will be glad
+to showcase your site.
 
-# How to use (MUST READ!)
+# Table of contents
+
+I highly recommend to read the `How to use` section if you want to use
+this theme, you may find yourself lost if you don't.
+
+[How to use (MUST READ)](#how-to-use-must-read)
+ * [Prerequisites](#prerequisites)
+ * [Instalation](#installation)
+ * [Contents](#contents)
+ 	* [Adding content](#adding-content)
+ 	* [Titling content](#titling-content)
+ 	* [Ordering content](#ordering-content)
+ * [Configuration](#configuration)
+ * [Social media](#social-media)
+ 	* [Ordering social media](#ordering-social-media)
+ * [Custom imports](#custom-imports)
+ * [Styling](#styling)
+ 	* [Colors](#colors)
+ 	* [Fonts, images and other static files](#fonts-images-and-other-static-files)
+ 	* [SASS and CSS](#sass-and-css)
+
+[Advanced modifications](#advanced-modifications)
+ * [Javascript SPA core](#javascript-spa-core)
+ * [Layouts](#layouts)
+
+[Distribution](#distribution)
+ * [License](#license)
+ * [Contributing](#contributing)
+ * [Versioning](#Versioning)
+
+# How to use (MUST READ)
 This is not the usual Hugo theme you can download and start
-adding contents. Making it single page comes with some limitations
+adding contents right away. But don't get scared, you won't need to read
+all this document in order to create your site. Unless you aim to create
+something very customized, you just need to read the basics.
+Making the theme a SPA comes with some essential features
 you need to know before starting to build your website.
+
+## Prerequisites
+The only thing you need in order to use this theme is *Hugo extended version*.
+If you still don't have it, you can find a complete installation guide
+[here](https://gohugo.io/getting-started/installing/).
+
+I highly recommend *Hugo 0.48* or higher, but it may work with older versions
+superior to 0.43. If you have any trouble with your Hugo version using this
+theme, I invite you to open an issue on Github so I can help you.
+
+## Installation
+You can find the Hugo's theme installation guide
+[here](https://gohugo.io/themes/installing-and-using-themes/). But those
+are the basic steps you should be following (assuming you already installed
+Hugo):
+
+Open a terminal wherever you want to create your new site. Invoke Hugo
+to do so using the following command (your Hugo base command may be different):
+
+```
+hugo new site NAME_OF_YOUR_SITE
+```
+
+Navigate to the `themes` folder of your site from the terminal:
+
+```
+cd NAME_OF_YOUR_SITE
+cd themes
+```
+
+Clone this repository inside the `themes` folder your are in:
+
+```
+git clone https://github.com/SAGGameDeveloper/hugo-minimalist-spa
+```
+
+Go to the root folder of your site, open the `config.toml` file and
+set the theme with the following line:
+
+```
+theme = "hugo-minimalist-spa"
+```
+
+That's all! You can now go and test your new site. To do so,
+open a terminal in the root folder of your site and use:
+
+```
+hugo server -w
+```
+
+To see your new site, you just have to go to `localhost:1313` in
+your web browser. This is the local server that will be hosting
+your website, as long as you keep that terminal opened.
 
 ## Contents
 Once you start adding content to your website, the default theme contents
@@ -78,7 +168,7 @@ To modify the description you need to do it within the `params` section. Using `
 Modifying the social media icons is quite simple, the moment you add your own, the
 theme default social media will disappear. Here you can see a list of supported icons:
 
-![alt text](https://raw.githubusercontent.com/SAGGameDeveloper/hugo-minimalist-spa/master/available_icons.png "Available icons")
+![Available icons](https://raw.githubusercontent.com/SAGGameDeveloper/hugo-minimalist-spa/master/available_icons.png "Available icons")
 
 To add your social media just create a `social-media.toml` (or the Hugo supported language
 your prefer) inside your `data/` folder, in your website's root directory. Then write down
@@ -184,6 +274,9 @@ those mentioned in this document have native theme support and will be automatic
 that every asset included in `static/` will be served into the final building, even if you never use it.
 
 ### SASS and CSS
+You can add your custom CSS as you would do with your normal site, then import it using the
+custom imports explained before, 
+
 Hugo minimalist SPA is built using only SASS, so if you want to modify it I recommend you to read
 the source files. I do not recommend at all to modify the compiled CSS, that won't keep the modifications
 the next time you build your website, and it will probably be much harder to do.
@@ -221,6 +314,15 @@ a custom title has been set), and uses it to set the navigation bar proper names
 the temporal `<div>`, created by the single layout, to finally get disposed of it.
 
 # Distribution
+
+## License
+This project is licensed under the MIT License - see the 
+[LICENSE](https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/LICENSE) file for details.
+
+## Contributing
+If you want to contribute to this theme, you can make a pull request and I will be glad to check it out.
+
+## Versioning
 You can modify this theme as much as you want. If you want to distribute a modified version,
 you must publish a link to this repository indicating that I'm the original author. Also, I would
 appreciate if you notified me so I can see it.
