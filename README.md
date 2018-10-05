@@ -1,6 +1,6 @@
 # [Hugo minimalist SPA](https://saggamedeveloper.github.io/hugo-minimalist-spa/)
 A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page_application) theme for [Hugo](https://github.com/gohugoio/hugo)
-(minimum 0.43).
+(minimum 0.48).
 
 # About
 Hugo does not support single page applications natively, so making a theme that does is quite a challenge. This is the main reason I decided to make this theme.
