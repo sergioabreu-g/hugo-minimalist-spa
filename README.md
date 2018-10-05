@@ -43,7 +43,7 @@ this theme, you may find yourself lost if you don't.
 [Distribution](#distribution)
  * [License](#license)
  * [Contributing](#contributing)
- * [Versioning](#Versioning)
+ * [Versioning](#versioning)
 
 # How to use (MUST READ)
 This is not the usual Hugo theme you can download and start
