@@ -11,8 +11,6 @@ so be aware of it if you use older versions. You can always open an
 issue if you are unable to make it work, I will be glad to help and
 make the necessary enhancements.
 
-You can see a working website example using this theme [here](https://saggamedeveloper.github.io/Cafe-website-SPA/).
-
 # How to use (MUST READ!)
 This is not the usual Hugo theme you can download and start
 adding contents. Making it single page comes with some limitations

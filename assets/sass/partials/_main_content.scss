@@ -51,3 +51,9 @@
 		overflow: visible;	
 	}
 }
+
+.hugo-logo {
+	display: block;
+	margin: 7% auto;
+	@include respond-to(vertical-layout) { margin: auto; }
+}
