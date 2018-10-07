@@ -9,7 +9,7 @@
 			{{ if fileExists "content/tabs" }}
 			
 				{{ range (readDir "content/tabs") }}
-					<div id="{{ replace (substr .Name 0 -3) " " "" }}" style="display: none"></div>
+					<div id="content-{{ replace (substr .Name 0 -3) " " "" }}" style="display: none"></div>
 				{{ end }}
 				
 			{{ else }}
