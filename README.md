@@ -112,11 +112,12 @@ will automatically disappear.
 
 ### Adding content
 To add custom content you need to create a folder named `tabs/`
-inside your page's `content/` folder. All the content of your page
+inside your sites's `content/` folder. All the content of your page
 will be loaded from here, and it must be on Markdown (`.md`). Do
 not add any other files/folders in the `tabs/` folder. If you do,
 the theme will still treat it as a Markdown file, causing
-major problems with your final HTML.
+major problems with your final HTML. Also, don't use spaces or special characters
+in your filenames, that can cause major bugs with the URL's and the loading of your files.
 
 Inside you markdown files you can write HTML if you want,
 it will be added to the final `index.html` automatically. If you
