@@ -200,16 +200,22 @@ your website, as long as you keep that terminal opened.</p>
 <h2 id="contents">Contents</h2>
 
 <p>Once you start adding content to your website, the default theme contents
-will automatically disappear.</p>
+will automatically disappear. Take into account that if you add your own contents,
+the individual URL's of each content tab will mostly sure change. So if you just
+reload your browser your URL may still be pointing to the past tabs names. That will
+cause the reload to partly or completely fail. So make sure your URL is the right one
+if you change your content filenames.
+</p>
 
 <h3 id="addingcontent">Adding content</h3>
 
 <p>To add custom content you need to create a folder named <code>tabs/</code>
-inside your page's <code>content/</code> folder. All the content of your page
+inside your sites's <code>content/</code> folder. All the content of your page
 will be loaded from here, and it must be on Markdown (<code>.md</code>). Do
 not add any other files/folders in the <code>tabs/</code> folder. If you do,
 the theme will still treat it as a Markdown file, causing
-major problems with your final HTML.</p>
+major problems with your final HTML. Also, don't use spaces or special characters
+in your filenames, that can cause major bugs with the URL's and the loading of your files.</p>
 
 <p>Inside you markdown files you can write HTML if you want,
 it will be added to the final <code>index.html</code> automatically. If you
