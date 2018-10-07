@@ -108,7 +108,11 @@ your website, as long as you keep that terminal opened.
 
 ## Contents
 Once you start adding content to your website, the default theme contents
-will automatically disappear.
+will automatically disappear. Take into account that if you add your own contents,
+the individual URL's of each content tab will mostly sure change. So if you just
+reload your browser your URL may still be pointing to the past tabs names. That will
+cause the reload to partly or completely fail. So make sure your URL is the right one
+if you change your content filenames.
 
 ### Adding content
 To add custom content you need to create a folder named `tabs/`
