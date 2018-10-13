@@ -54,7 +54,7 @@ Making the theme a SPA comes with some essential features
 you need to know before starting to build your website.
 
 ## Prerequisites
-The only thing you need in order to use this theme is *Hugo extended version*.
+The only thing you need in order to use this theme is Hugo.
 If you still don't have it, you can find a complete installation guide
 [here](https://gohugo.io/getting-started/installing/).
 
