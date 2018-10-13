@@ -3,17 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://gohugo.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gohugo.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://gohugo.io/distribution/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gohugo.io/howtouse/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gohugo.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://gohugo.io/tags/</loc>
     <priority>0</priority>
   </url>
   

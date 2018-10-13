@@ -42,7 +42,7 @@ router.prototype.initial_load = function() {
 					//If the user has specified a title, we change the navbar element
 					//to use it
 					if (inner_div.id != "") {
-						document.getElementById("navbar-"+element.id).getElementsByTagName('a')[0].innerHTML = inner_div.id.split("-")[1];
+						document.getElementById("navbar-"+element.id.split("-")[1]).getElementsByTagName('a')[0].innerHTML = inner_div.id.split("-")[1];
 					}
 					
 					//Finally get disposed of the placeholder inner '<div>'
@@ -50,7 +50,7 @@ router.prototype.initial_load = function() {
 				},
 				
 				error: function(error) {
-					console.log("Error loading file from route: " + route + " [Ignore this if you haven't setup your website content yet]")
+					console.log("Error loading file from route: " + route)
 				}
 			});
 		})(this.routes[id], this.tab_elements[id]);

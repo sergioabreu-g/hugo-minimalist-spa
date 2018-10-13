@@ -271,6 +271,7 @@ a {
   justify-content: space-evenly;
   flex-direction: row;
   text-align: center;
+  min-height: 1.3rem;
   overflow: hidden;
   background-color: #474747;
   -webkit-transition: max-height 0.7s;

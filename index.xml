@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo minimalist SPA</title>
-    <link>/</link>
-    <description>Recent content on Hugo minimalist SPA</description>
+    <title>Hugo Themes</title>
+    <link>https://gohugo.io/</link>
+    <description>Recent content on Hugo Themes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gohugo.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://gohugo.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/about/</guid>
+      <description>Hugo minimalist SPA 
+A minimalist single page application theme for Hugo, with a clear focus on responsiveness, simplicity and elegance.
+About I love challenges, and making a single page application using Hugo, a static site generator, seemed like a good one. The SPA core is made using plain Javascript (only JQuery is used for the Ajax requests). I aim to provide a simple but powerful design anyone can use, either for personal or professional matters.</description>
+    </item>
+    
+    <item>
+      <title>Distribution</title>
+      <link>https://gohugo.io/distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/distribution/</guid>
+      <description>Distribution License
+This project is licensed under the MIT License - see the LICENSE file for details.
+Contributing If you want to contribute to this theme, you can make a pull request and I will be glad to check it out.
+Versioning You can modify this theme as much as you want. If you want to distribute a modified version, you must publish a link to this repository indicating that I&amp;rsquo;m the original author.</description>
+    </item>
+    
+    <item>
+      <title>How to use</title>
+      <link>https://gohugo.io/howtouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/howtouse/</guid>
+      <description>How to use (MUST READ)
+This is not the usual Hugo theme you can download and start adding contents right away. But don&#39;t get scared, you won&#39;t need to read all this document in order to create your site. Unless you aim to create something very customized, you just need to read the basics. Making the theme a SPA comes with some essential features you need to know before starting to build your website.</description>
+    </item>
     
   </channel>
 </rss>
