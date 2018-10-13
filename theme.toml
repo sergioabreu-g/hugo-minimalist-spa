@@ -3,7 +3,7 @@
 
 name = "Hugo minimalist SPA"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/LICENSE"
 description = "A minimalist small business SPA theme for Hugo"
 homepage = "https://github.com/SAGGameDeveloper/hugo-minimalist-spa"
 tags = ["minimalist", "spa", "singlepage", "business", "professional", "simple"]

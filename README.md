@@ -4,7 +4,7 @@ A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page
 theme for [Hugo](https://github.com/gohugoio/hugo), with a clear focus on responsiveness,
 simplicity and elegance.
 
-![Theme sample](https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/images/tn.png "Theme sample")
+![Theme sample](https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/images/screenshot.png "Theme sample")
 
 # About
 I love challenges, and making a single page application using Hugo, a static site generator,
