@@ -1,6 +1,0 @@
-languageCode = "en-us"
-title = "Hugo minimalist SPA"
-author = "Sergio Abreu García"
-
-[params]	
-	description = "This website uses hugo-minimalist-spa theme"

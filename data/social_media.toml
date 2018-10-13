@@ -12,7 +12,7 @@
 	
 [email]
 	source = "images/social_media/email.svg"
-	target = "saggamedeveloper@gmail.com"
+	target = "mailto:saggamedeveloper@gmail.com"
 	
 [home]
 	source = "images/social_media/home.svg"
