@@ -6,20 +6,8 @@
 		
 		<div class="tabs-list" id="tabs-list">
 			
-			{{ if fileExists "content/tabs" }}
-			
-				{{ range (readDir "content/tabs") }}
-					<div id="content-{{ replace (substr .Name 0 -3) " " "" }}" style="display: none"></div>
-				{{ end }}
-				
-			{{ else }}
-				{{ range (readDir "themes/hugo-minimalist-spa/layouts/partials/theme-content") }}
-			
-					{{ $path := printf "%s%s" "theme-content/" .Name }}
-					<div id="content-{{ replace (substr .Name 2 -5) " " "" }}" style="display: none">{{ partial $path . }}</div>
-			
-				{{ end }}
-			
+			{{ range (readDir "content") }}
+				<div id="content-{{ lower (replace (substr .Name 0 -3) " " "") }}" style="display: none"></div>
 			{{ end }}
 			
 		</div>

@@ -5,6 +5,8 @@
 	flex-direction: row;
 	text-align: center;
 	
+	min-height: calc(1rem + 2%);
+	
 	overflow: hidden;
 	
 	background-color: $color_navbar;

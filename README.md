@@ -107,21 +107,25 @@ your web browser. This is the local server that will be hosting
 your website, as long as you keep that terminal opened.
 
 ## Contents
-Once you start adding content to your website, the default theme contents
-will automatically disappear. Take into account that if you add your own contents,
+Adding content to your site is very straightforward, just putting your `.md` files into
+the `content` folder will do (keep reading).
+
+Take into account that if you change the contents,
 the individual URL's of each content tab will mostly sure change. So if you just
 reload your browser your URL may still be pointing to the past tabs names. That will
 cause the reload to partly or completely fail. So make sure your URL is the right one
-if you change your content filenames.
+if you change your content files/filenames.
 
 ### Adding content
-To add custom content you need to create a folder named `tabs/`
-inside your sites's `content/` folder. All the content of your page
-will be loaded from here, and it must be on Markdown (`.md`). Do
-not add any other files/folders in the `tabs/` folder. If you do,
+To add custom content you need add your MarkDown files to the
+`content` default folder of your site. All the content of your page
+will be loaded from here, and it MUST be on Markdown (`.md`).
+
+Do not add any other files/folders into `content`. If you do,
 the theme will still treat it as a Markdown file, causing
-major problems with your final HTML. Also, don't use spaces or special characters
-in your filenames, that can cause major bugs with the URL's and the loading of your files.
+major problems with your final HTML. Also, I highly recommend not
+to use spaces or special characters in your filenames, that could
+cause critical bugs with the URL's and the loading of your files.
 
 Inside you markdown files you can write HTML if you want,
 it will be added to the final `index.html` automatically. If you
@@ -308,9 +312,9 @@ some elements using Hugo functions. Those id's are later used by the JavaScript 
 requests. This way the id's for the content can be set dynamically. At the same time, the JavaScript
 code is able to find the files to be loaded without using external configuration files.
 
-The Go implementation that does this can be found in `navbar.html` and `main_content.html` (in `layouts/partials/` folder),
-they use the filename and custom title (if there's any) to inject the proper id's into the final HTML. Those id's are then
-used by the client side JavaScript to request the correct files from the `content/tabs` folder.
+The Go implementation that does this can be found in `navbar.html` and `main_content.html` (in `layouts/partials/` folder).
+They use the filename and custom title (if there's any) to inject the proper id's into the final HTML. Those id's are then
+used by the client side JavaScript to request the correct files from the `content` folder.
 
 Due to Hugo limitations, the custom titles cannot be directly injected into the navigation bar for their use.
 To skip this problem, I use a temporal `<div>` whose id is the custom title. This `<div>` is set in the `single.html` layout,

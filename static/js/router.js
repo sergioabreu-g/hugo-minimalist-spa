@@ -50,7 +50,7 @@ router.prototype.initial_load = function() {
 				},
 				
 				error: function(error) {
-					console.log("Error loading file from route: " + route + " [Ignore this if you haven't setup your website content yet]")
+					console.log("Error loading file from route: " + route)
 				}
 			});
 		})(this.routes[id], this.tab_elements[id]);
