@@ -1,7 +1,7 @@
 'use strict';
 
 window.onload = function() {
-	var content_mask = "content-"
+	var content_mask = "content@"
 	
 	var base_url = "";
 	var base_file = "/index.html";
