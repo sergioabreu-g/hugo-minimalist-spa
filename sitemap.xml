@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gohugo.io/about/</loc>
+    <loc>https://gohugo.io/1-about/</loc>
   </url>
   
   <url>
@@ -12,11 +12,11 @@
   </url>
   
   <url>
-    <loc>https://gohugo.io/distribution/</loc>
+    <loc>https://gohugo.io/3-distribution/</loc>
   </url>
   
   <url>
-    <loc>https://gohugo.io/howtouse/</loc>
+    <loc>https://gohugo.io/2-howtouse/</loc>
   </url>
   
   <url>
