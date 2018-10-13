@@ -5,8 +5,8 @@
 	
 	{{ range (readDir "content") }}
 
-		<div class="navbar-element" id="navbar-{{ lower (replace (substr .Name 0 -3) " " "") }}">
-			<a href="#{{ lower (replace (substr .Name 0 -3) " " "") }}">{{ substr .Name 0 -3 }}</a>
+		<div class="navbar-element" id="navbar@{{ lower (replace (substr .Name 0 -3) " " "-") }}">
+			<a href="#{{ lower (replace (substr .Name 0 -3) " " "-") }}">{{ substr .Name 0 -3 }}</a>
 		</div>
 
 	{{ end }}

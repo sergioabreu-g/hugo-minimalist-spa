@@ -7,7 +7,7 @@
 		<div class="tabs-list" id="tabs-list">
 			
 			{{ range (readDir "content") }}
-				<div id="content-{{ lower (replace (substr .Name 0 -3) " " "") }}" style="display: none"></div>
+				<div id="content@{{ lower (replace (substr .Name 0 -3) " " "-") }}" style="display: none"></div>
 			{{ end }}
 			
 		</div>

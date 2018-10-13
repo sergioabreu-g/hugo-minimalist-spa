@@ -1,0 +1,11 @@
+{{ define "main" }}
+	<div id="{{ with .Title }}title@{{ . }}{{ end }}">
+
+		{{ with .Content }}
+			{{ . }}
+		{{ else }}
+			<span>Your {{ with .Title }}"{{ . }}"{{ end }} content will go here.</span>
+		{{ end }}
+	
+	</div>
+{{ end }}
