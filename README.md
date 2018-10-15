@@ -10,7 +10,8 @@ simplicity and elegance.
 I love challenges, and making a single page application using Hugo, a static site generator,
 seemed like a good one. The SPA core is made using plain Javascript (only JQuery is used
 for the Ajax requests). I aim to provide a simple but powerful design anyone can use, either
-for personal or professional matters.
+for personal or professional matters. [Here](https://saggamedeveloper.github.io/Cafe-website-SPA/)
+you can see a working site example using this theme.
 
 If you make any website using this theme I encourage you to open an issue, I will be glad
 to showcase your site.

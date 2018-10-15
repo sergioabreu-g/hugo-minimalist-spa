@@ -6,6 +6,7 @@
 	text-align: center;
 	
 	min-height: 1.3rem;
+	@include respond-to(vertical-layout) { min-height: 0; }
 	
 	overflow: hidden;
 	
