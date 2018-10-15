@@ -3,29 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/1-about/</loc>
+    <loc>/1-about/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/3-distribution/</loc>
+    <loc>/3-distribution/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2-howtouse/</loc>
+    <loc>/2-howtouse/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   

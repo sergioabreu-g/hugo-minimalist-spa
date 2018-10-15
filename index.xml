@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Themes</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Hugo Themes</description>
+    <title>Hugo minimalist SPA</title>
+    <link>/</link>
+    <description>Recent content on Hugo minimalist SPA</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <language>en-us</language>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/1-about/</link>
+      <link>/1-about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/1-about/</guid>
+      <guid>/1-about/</guid>
       <description>Hugo minimalist SPA 
 A minimalist single page application theme for Hugo, with a clear focus on responsiveness, simplicity and elegance.
 About I love challenges, and making a single page application using Hugo, a static site generator, seemed like a good one. The SPA core is made using plain Javascript (only JQuery is used for the Ajax requests). I aim to provide a simple but powerful design anyone can use, either for personal or professional matters.</description>
@@ -23,10 +23,10 @@ About I love challenges, and making a single page application using Hugo, a stat
     
     <item>
       <title>Distribution</title>
-      <link>http://localhost:1313/3-distribution/</link>
+      <link>/3-distribution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/3-distribution/</guid>
+      <guid>/3-distribution/</guid>
       <description>Distribution License
 This project is licensed under the MIT License - see the LICENSE file for details.
 Contributing If you want to contribute to this theme, you can make a pull request and I will be glad to check it out.
@@ -35,10 +35,10 @@ Versioning You can modify this theme as much as you want. If you want to distrib
     
     <item>
       <title>How to use</title>
-      <link>http://localhost:1313/2-howtouse/</link>
+      <link>/2-howtouse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2-howtouse/</guid>
+      <guid>/2-howtouse/</guid>
       <description>How to use (MUST READ)
 This is not the usual Hugo theme you can download and start adding contents right away. But don&#39;t get scared, you won&#39;t need to read all this document in order to create your site. Unless you aim to create something very customized, you just need to read the basics. Making the theme a SPA comes with some essential features you need to know before starting to build your website.</description>
     </item>
