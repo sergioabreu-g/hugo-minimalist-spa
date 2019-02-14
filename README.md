@@ -1,16 +1,16 @@
-# [Hugo minimalist SPA](https://saggamedeveloper.github.io/hugo-minimalist-spa/) ![hugo-theme](https://img.shields.io/badge/hugo-theme-brightgreen.svg) ![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)
+# [Hugo minimalist SPA](https://sag-dev.github.io/hugo-minimalist-spa/) ![hugo-theme](https://img.shields.io/badge/hugo-theme-brightgreen.svg) ![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)
 
 A minimalist [single page application](https://en.wikipedia.org/wiki/Single-page_application)
 theme for [Hugo](https://github.com/gohugoio/hugo), with a clear focus on responsiveness,
 simplicity and elegance.
 
-![Theme sample](https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/images/screenshot.png "Theme sample")
+![Theme sample](https://github.com/sag-dev/hugo-minimalist-spa/blob/master/images/screenshot.png "Theme sample")
 
 # About
 I love challenges, and making a single page application using Hugo, a static site generator,
 seemed like a good one. The SPA core is made using plain Javascript (only JQuery is used
 for the Ajax requests). I aim to provide a simple but powerful design anyone can use, either
-for personal or professional matters. [Here](https://saggamedeveloper.github.io/Cafe-website-SPA/)
+for personal or professional matters. [Here](https://sag-dev.github.io/Cafe-website-SPA/)
 you can see a working site example using this theme.
 
 If you make any website using this theme I encourage you to open an issue, I will be glad
@@ -327,7 +327,7 @@ the temporal `<div>`, created by the single layout, to finally get disposed of i
 
 ## License
 This project is licensed under the MIT License - see the 
-[LICENSE](https://github.com/SAGGameDeveloper/hugo-minimalist-spa/blob/master/LICENSE) file for details.
+[LICENSE](https://github.com/sag-dev/hugo-minimalist-spa/blob/master/LICENSE) file for details.
 
 ## Contributing
 If you want to contribute to this theme, you can make a pull request and I will be glad to check it out.
